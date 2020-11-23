@@ -1,0 +1,176 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', SimSun, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+
+  &.is-component {
+    overflow: hidden;
+  }
+}
+
+#app {
+  height: 100%;
+
+  &.is-component {
+    overflow-y: hidden;
+
+    .main-cnt {
+      padding: 0;
+      margin-top: 0;
+      height: 100%;
+      min-height: auto;
+    }
+
+    .headerWrapper {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1500;
+
+      .container {
+        padding: 0;
+      }
+    }
+  }
+}
+
+a {
+  color: #409eff;
+  text-decoration: none;
+}
+
+code {
+  padding: 0 4px;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.hljs {
+  line-height: 20px;
+  font-family: Menlo, Monaco, Consolas, Courier, monospace;
+  font-size: 12px;
+  padding: 10px 24px 18px 24px;
+  border: solid 1px #eaeefb;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto;
+}
+
+.main-cnt {
+  margin-top: -80px;
+  padding: 80px 0 340px;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+#app {
+  h2 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    font-weight: normal;
+
+    a {
+      display: none;
+    }
+
+    &:hover a {
+      opacity: 0.4;
+    }
+  }
+
+  p {
+    // width: 60%;
+    margin: auto;
+    padding: 10px;
+    font-size: 16px;
+    color: #d3aec2;
+    line-height: 30px;
+  }
+
+  .tip {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ecf8ff;
+    border-radius: 4px;
+    border-left: #1b9ae4 5px solid;
+
+    p {
+      width: 100%;
+    }
+
+    code {
+      background-color: rgb(255, 255, 255);
+      color: #445368;
+    }
+  }
+
+  .warning {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #fff6f7;
+    border-radius: 4px;
+    border-left: rgb(252, 122, 2) 5px solid;
+
+    p {
+      width: 100%;
+    }
+
+    code {
+      background-color: rgba(255, 255, 255, 0.7);
+      color: #445368;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+
+  .container,
+  .page-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .container,
+  .page-container {
+    padding: 0 20px;
+  }
+
+  #app.is-component .headerWrapper .container {
+    padding: 0 12px;
+  }
+}
