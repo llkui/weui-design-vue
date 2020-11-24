@@ -107,8 +107,7 @@ textarea {
     }
   }
 
-  p {
-    // width: 60%;
+  .description p {
     margin: auto;
     padding: 10px;
     font-size: 16px;
@@ -124,10 +123,6 @@ textarea {
     background-color: #ecf8ff;
     border-radius: 4px;
     border-left: #1b9ae4 5px solid;
-
-    p {
-      width: 100%;
-    }
 
     code {
       background-color: rgb(255, 255, 255);

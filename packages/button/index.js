@@ -1,8 +1,7 @@
-// 暴露组件
-import VwButton from './src/index'
+import WeuiButton from './src/button'
 
-VwButton.install = vue => {
-  vue.component(VwButton.name, VwButton)
+WeuiButton.install = vue => {
+  vue.component(WeuiButton.name, WeuiButton)
 }
 
-export default VwButton
+export default WeuiButton

@@ -1,7 +1,25 @@
-import VwButton from './button'
+import WeuiButton from './button'
+import {
+  WeuiFlex,
+  WeuiFlexItem
+} from './flex'
+import {
+  WeuiFooter,
+  WeuiFooterText,
+  WeuiFooterLinks,
+  WeuiFooterLink
+} from './footer'
 
 // 所有组件列表
-const components = [VwButton]
+const components = [
+  WeuiButton,
+  WeuiFlex,
+  WeuiFlexItem,
+  WeuiFooter,
+  WeuiFooterText,
+  WeuiFooterLinks,
+  WeuiFooterLink
+]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {
   // 判断是否安装，安装过就不继续往下执行

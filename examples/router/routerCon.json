@@ -6,11 +6,11 @@
       "path": "/button",
       "title": "Button"
     }, {
-      "path": "/form",
-      "title": "Form"
+      "path": "/flex",
+      "title": "Flex"
     }, {
-      "path": "/list",
-      "title": "List"
+      "path": "/footer",
+      "title": "Footer"
     }, {
       "path": "/slider",
       "title": "Slider"
