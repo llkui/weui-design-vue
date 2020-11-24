@@ -9,6 +9,9 @@ import {
   WeuiFooterLinks,
   WeuiFooterLink
 } from './footer'
+import WeuiIcon from './icon'
+import WeuiLoadmore from './loadmore'
+import WeuiLoading from './loading'
 
 // 所有组件列表
 const components = [
@@ -18,7 +21,10 @@ const components = [
   WeuiFooter,
   WeuiFooterText,
   WeuiFooterLinks,
-  WeuiFooterLink
+  WeuiFooterLink,
+  WeuiIcon,
+  WeuiLoadmore,
+  WeuiLoading
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {

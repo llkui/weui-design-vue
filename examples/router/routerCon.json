@@ -12,11 +12,14 @@
       "path": "/footer",
       "title": "Footer"
     }, {
-      "path": "/slider",
-      "title": "Slider"
+      "path": "/icon",
+      "title": "Icon"
     }, {
-      "path": "/uploader",
-      "title": "Uploader"
+      "path": "/loadmore",
+      "title": "Loadmore"
+    }, {
+      "path": "/loading",
+      "title": "Loading"
     }]
   }]
 }]
