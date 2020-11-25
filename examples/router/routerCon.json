@@ -1,11 +1,17 @@
 [{
   "name": "vue weui",
   "groups": [{
+    "groupName": "组件（7/28）",
+    "list": []
+  }, {
     "groupName": "表单",
     "list": [{
       "path": "/button",
       "title": "Button"
-    }, {
+    }]
+  }, {
+    "groupName": "基础组件",
+    "list": [{
       "path": "/flex",
       "title": "Flex"
     }, {
@@ -15,14 +21,26 @@
       "path": "/icon",
       "title": "Icon"
     }, {
-      "path": "/loadmore",
-      "title": "Loadmore"
-    }, {
       "path": "/loading",
       "title": "Loading"
     }, {
+      "path": "/loadmore",
+      "title": "Loadmore"
+    }]
+  }, {
+    "groupName": "操作反馈",
+    "list": [{
       "path": "/dialog",
       "title": "Dialog"
     }]
+  }, {
+    "groupName": "导航相关",
+    "list": []
+  }, {
+    "groupName": "搜索相关",
+    "list": []
+  }, {
+    "groupName": "层级规范",
+    "list": []
   }]
 }]
