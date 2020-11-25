@@ -20,6 +20,9 @@
     }, {
       "path": "/loading",
       "title": "Loading"
+    }, {
+      "path": "/dialog",
+      "title": "Dialog"
     }]
   }]
 }]

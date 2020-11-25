@@ -12,6 +12,7 @@ import {
 import WeuiIcon from './icon'
 import WeuiLoadmore from './loadmore'
 import WeuiLoading from './loading'
+import WeuiDialog from './dialog'
 
 // 所有组件列表
 const components = [
@@ -24,7 +25,8 @@ const components = [
   WeuiFooterLink,
   WeuiIcon,
   WeuiLoadmore,
-  WeuiLoading
+  WeuiLoading,
+  WeuiDialog
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {

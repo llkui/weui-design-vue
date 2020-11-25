@@ -68,9 +68,9 @@ export default {
   watch: {
     isExpanded (val) {
       this.codeArea.style.height = val ? `${this.codeAreaHeight + 1}px` : '0'
-      console.log(this.$el.getElementsByClassName('description').length)
-      console.log(this.$el.getElementsByClassName('highlight'))
-      console.log(this.codeAreaHeight)
+      // console.log(this.$el.getElementsByClassName('description').length)
+      // console.log(this.$el.getElementsByClassName('highlight'))
+      // console.log(this.codeAreaHeight)
       if (!val) {
         this.fixedControl = false
         this.$refs.control.style.left = '0'
