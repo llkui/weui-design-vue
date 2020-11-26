@@ -1,7 +1,7 @@
 [{
   "name": "vue weui",
   "groups": [{
-    "groupName": "组件（7/28）",
+    "groupName": "组件（9/28）",
     "list": []
   }, {
     "groupName": "表单",
@@ -27,14 +27,17 @@
       "path": "/loadmore",
       "title": "Loadmore"
     }, {
-        "path": "/grid",
-        "title": "grid"
+      "path": "/grid",
+      "title": "grid"
     }]
   }, {
     "groupName": "操作反馈",
     "list": [{
       "path": "/dialog",
       "title": "Dialog"
+    }, {
+      "path": "/toptips",
+      "title": "TopTips"
     }]
   }, {
     "groupName": "导航相关",

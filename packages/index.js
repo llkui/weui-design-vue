@@ -17,6 +17,7 @@ import {
   WeuiGrid,
   WeuiGridItem
 } from './grid'
+import WeuiTopTips from './toptips'
 
 // 所有组件列表
 const components = [
@@ -32,14 +33,15 @@ const components = [
   WeuiLoading,
   WeuiDialog,
   WeuiGrid,
-  WeuiGridItem
+  WeuiGridItem,
+  WeuiTopTips
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {
   // 判断是否安装，安装过就不继续往下执行
   if (install.installed) return
   install.installed = true
-  // 便利注册所有组件
+  // 遍历注册所有组件
   components.map(component => Vue.use(component))
 }
 

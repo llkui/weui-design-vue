@@ -1,7 +1,7 @@
 <template>
-   <div class="weui-grids">
-      <slot></slot>  
-   </div>
+  <div class="weui-grids">
+    <slot></slot>
+  </div>
 </template>
 <script>
 export default {
