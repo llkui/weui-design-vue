@@ -26,6 +26,9 @@
     }, {
       "path": "/loadmore",
       "title": "Loadmore"
+    }, {
+        "path": "/grid",
+        "title": "grid"
     }]
   }, {
     "groupName": "操作反馈",
