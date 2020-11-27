@@ -5,7 +5,7 @@
 ```html
 <template>
   <weui-grid>
-    <weui-grid-item v-for="count in 9" :icon="tabbar">
+    <weui-grid-item v-for="(count, index) in 9" :key="index" :icon="tabbar">
       Grid
     </weui-grid-item>
   </weui-grid>

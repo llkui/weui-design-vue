@@ -22,6 +22,7 @@ import {
   WeuiGridItem
 } from './grid'
 import WeuiTopTips from './toptips'
+import WeuiToast from './toast'
 
 // 所有组件列表
 const components = [
@@ -40,7 +41,8 @@ const components = [
   WeuiDialog,
   WeuiGrid,
   WeuiGridItem,
-  WeuiTopTips
+  WeuiTopTips,
+  WeuiToast
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {

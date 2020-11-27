@@ -1,16 +1,16 @@
 [{
   "name": "vue weui",
   "groups": [{
-    "groupName": "组件（10/28）",
+    "groupName": "组件（11/28）",
     "list": []
   }, {
     "groupName": "表单",
     "list": [{
       "path": "/button",
       "title": "Button"
-    },{
+    }, {
       "path": "/list",
-      "title": "list"
+      "title": "List"
     }]
   }, {
     "groupName": "基础组件",
@@ -31,13 +31,16 @@
       "title": "Loadmore"
     }, {
       "path": "/grid",
-      "title": "grid"
+      "title": "Grid"
     }]
   }, {
     "groupName": "操作反馈",
     "list": [{
       "path": "/dialog",
       "title": "Dialog"
+    }, {
+      "path": "/toast",
+      "title": "Toast"
     }, {
       "path": "/toptips",
       "title": "TopTips"
