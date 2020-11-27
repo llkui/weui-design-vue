@@ -1,13 +1,16 @@
 [{
   "name": "vue weui",
   "groups": [{
-    "groupName": "组件（9/28）",
+    "groupName": "组件（10/28）",
     "list": []
   }, {
     "groupName": "表单",
     "list": [{
       "path": "/button",
       "title": "Button"
+    },{
+      "path": "/list",
+      "title": "list"
     }]
   }, {
     "groupName": "基础组件",

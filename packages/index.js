@@ -1,5 +1,9 @@
 import WeuiButton from './button'
 import {
+  WeuiCellList,
+  WeuiCell
+} from './list'
+import {
   WeuiFlex,
   WeuiFlexItem
 } from './flex'
@@ -22,6 +26,8 @@ import WeuiTopTips from './toptips'
 // 所有组件列表
 const components = [
   WeuiButton,
+  WeuiCellList,
+  WeuiCell,
   WeuiFlex,
   WeuiFlexItem,
   WeuiFooter,
