@@ -23,6 +23,7 @@ import {
 } from './grid'
 import WeuiTopTips from './toptips'
 import WeuiToast from './toast'
+import WeuiActionSheet from './action-sheet'
 
 // 所有组件列表
 const components = [
@@ -42,7 +43,8 @@ const components = [
   WeuiGrid,
   WeuiGridItem,
   WeuiTopTips,
-  WeuiToast
+  WeuiToast,
+  WeuiActionSheet
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {

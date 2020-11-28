@@ -1,7 +1,7 @@
 [{
   "name": "vue weui",
   "groups": [{
-    "groupName": "组件（11/28）",
+    "groupName": "组件（12/28）",
     "list": []
   }, {
     "groupName": "表单",
@@ -36,6 +36,9 @@
   }, {
     "groupName": "操作反馈",
     "list": [{
+      "path": "/action-sheet",
+      "title": "ActionSheet"
+    },{
       "path": "/dialog",
       "title": "Dialog"
     }, {
