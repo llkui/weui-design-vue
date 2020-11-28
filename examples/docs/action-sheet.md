@@ -35,16 +35,16 @@
 
 ## config
 
-| 参数         | 说明               | 类型    | 可选值        | 默认值   |
-| --------     | --------------    | ------- | ----------    | ------- |
-| type         | 类型               | string  | ios / androis | ios     |
-| title        | 标题               | string  | —             | —       |
-| cancelText   | 取消文本            | string  | —             | 取消    |
-| maskClosable | 点击蒙层是否允许关闭 | boolean | —             | true    |
+| 参数         | 说明                 | 类型    | 可选值        | 默认值 |
+| ------------ | -------------------- | ------- | ------------- | ------ |
+| type         | 类型                 | string  | ios / androis | ios    |
+| title        | 标题                 | string  | —             | —      |
+| cancelText   | 取消文本             | string  | —             | 取消   |
+| maskClosable | 点击蒙层是否允许关闭 | boolean | —             | true   |
 
 ## menus
 
-| 参数 | 说明  | 类型    | 可选值 | 默认值   |
-| ---- | ---  | ------- | -----  | ------- |
-| text | 文本  | string  | —     | —       |
-| type | 类型  | string  | warn  | —       |
+| 参数 | 说明 | 类型   | 可选值 | 默认值 |
+| ---- | ---- | ------ | ------ | ------ |
+| text | 文本 | string | —      | —      |
+| type | 类型 | string | warn   | —      |

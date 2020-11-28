@@ -80,30 +80,32 @@ textarea {
 }
 
 #app {
-  h2 {
-    font-size: 28px;
-    margin: 0;
-  }
-
-  h3 {
-    font-size: 22px;
-  }
-
-  h2,
-  h3,
-  h4,
-  h5 {
-    width: 60%;
-    margin: auto;
-    margin-top: 10px;
-    font-weight: normal;
-
-    a {
-      display: none;
+  section {
+    &>h2 {
+      font-size: 28px;
+      margin: 0;
     }
 
-    &:hover a {
-      opacity: 0.4;
+    &>h3 {
+      font-size: 22px;
+    }
+
+    &>h2,
+    &>h3,
+    &>h4,
+    &>h5 {
+      width: 60%;
+      margin: auto;
+      margin-top: 10px;
+      font-weight: normal;
+
+      a {
+        display: none;
+      }
+
+      &:hover a {
+        opacity: 0.4;
+      }
     }
   }
 

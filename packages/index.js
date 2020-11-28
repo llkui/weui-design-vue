@@ -24,6 +24,10 @@ import {
 import WeuiTopTips from './toptips'
 import WeuiToast from './toast'
 import WeuiActionSheet from './action-sheet'
+import {
+  WeuiMsg,
+  WeuiMsgFooterLink
+} from './msg'
 
 // 所有组件列表
 const components = [
@@ -44,7 +48,9 @@ const components = [
   WeuiGridItem,
   WeuiTopTips,
   WeuiToast,
-  WeuiActionSheet
+  WeuiActionSheet,
+  WeuiMsg,
+  WeuiMsgFooterLink
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {
