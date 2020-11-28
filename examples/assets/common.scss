@@ -80,7 +80,7 @@ textarea {
 }
 
 #app {
-  section {
+  .page-container>section {
     &>h2 {
       font-size: 28px;
       margin: 0;

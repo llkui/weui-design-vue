@@ -15,6 +15,9 @@
   }, {
     "groupName": "基础组件",
     "list": [{
+      "path": "/article",
+      "title": "Article"
+    }, {
       "path": "/flex",
       "title": "Flex"
     }, {
