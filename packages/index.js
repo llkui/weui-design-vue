@@ -30,6 +30,10 @@ import {
   WeuiMsgFooterLink
 } from './msg'
 import WeuiArticle from './article'
+import {
+  WeuiTabbar,
+  WeuiTabbarItem
+} from './tabbar'
 
 // 所有组件列表
 const components = [
@@ -54,7 +58,9 @@ const components = [
   WeuiActionSheet,
   WeuiMsg,
   WeuiMsgFooterLink,
-  WeuiArticle
+  WeuiArticle,
+  WeuiTabbar,
+  WeuiTabbarItem
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {
