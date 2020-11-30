@@ -24,6 +24,9 @@
       "path": "/footer",
       "title": "Footer"
     }, {
+      "path": "/gallery",
+      "title": "Gallery"
+    }, {
       "path": "/icon",
       "title": "Icon"
     }, {

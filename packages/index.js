@@ -13,6 +13,7 @@ import {
   WeuiFooterLinks,
   WeuiFooterLink
 } from './footer'
+import Gallery from './gallery'
 import WeuiIcon from './icon'
 import WeuiLoadmore from './loadmore'
 import WeuiLoading from './loading'
@@ -38,6 +39,7 @@ const components = [
   WeuiFlex,
   WeuiFlexItem,
   WeuiFooter,
+  Gallery,
   WeuiFooterText,
   WeuiFooterLinks,
   WeuiFooterLink,
