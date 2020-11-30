@@ -1,7 +1,7 @@
 [{
   "name": "vue weui",
   "groups": [{
-    "groupName": "组件（16/27）",
+    "groupName": "组件（17/27）",
     "list": []
   }, {
     "groupName": "表单",
@@ -60,6 +60,9 @@
   }, {
     "groupName": "导航相关",
     "list": [{
+      "path": "/navbar",
+      "title": "Navbar"
+    }, {
       "path": "/tabbar",
       "title": "Tabbar"
     }]
