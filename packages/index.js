@@ -13,15 +13,19 @@ import {
   WeuiFooterLinks,
   WeuiFooterLink
 } from './footer'
-import Gallery from './gallery'
-import WeuiIcon from './icon'
-import WeuiLoadmore from './loadmore'
-import WeuiLoading from './loading'
-import WeuiDialog from './dialog'
+import WeuiGallery from './gallery'
 import {
   WeuiGrid,
   WeuiGridItem
 } from './grid'
+import WeuiIcon from './icon'
+import WeuiLoadmore from './loadmore'
+import WeuiLoading from './loading'
+import {
+  WeuiPreview,
+  WeuiPreviewItem
+} from './preview'
+import WeuiDialog from './dialog'
 import WeuiTopTips from './toptips'
 import WeuiToast from './toast'
 import WeuiActionSheet from './action-sheet'
@@ -51,16 +55,18 @@ const components = [
   WeuiFlex,
   WeuiFlexItem,
   WeuiFooter,
-  Gallery,
+  WeuiGallery,
+  WeuiGrid,
+  WeuiGridItem,
   WeuiFooterText,
   WeuiFooterLinks,
   WeuiFooterLink,
   WeuiIcon,
   WeuiLoadmore,
   WeuiLoading,
+  WeuiPreview,
+  WeuiPreviewItem,
   WeuiDialog,
-  WeuiGrid,
-  WeuiGridItem,
   WeuiTopTips,
   WeuiToast,
   WeuiActionSheet,

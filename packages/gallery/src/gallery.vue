@@ -5,7 +5,7 @@
       :style="'background-image: url(' + img + ')'"
     ></span>
     <div class="weui-gallery__opr" v-if="canDelete">
-      <a href="javascript:" class="weui-gallery__del">
+      <a href="javascript:" class="weui-gallery__del" @click="deleteGallery()">
         <i class="weui-icon-delete weui-icon_gallery-delete"></i>
       </a>
     </div>
@@ -28,5 +28,10 @@ export default {
       default: false,
     },
   },
+  methods: {
+    deleteGallery() {
+      this.$emit('delete');
+    }
+  }
 };
 </script>
