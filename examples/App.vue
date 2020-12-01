@@ -62,6 +62,11 @@ body {
   border-right: #000000 3px solid;
   background-color: #17171d;
 }
+@media screen and (max-width: 1150px) {
+  .sidebar {
+    display: none;
+  }
+}
 .view {
   float: left;
   height: 100%;

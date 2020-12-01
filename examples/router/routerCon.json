@@ -11,6 +11,9 @@
     }, {
       "path": "/list",
       "title": "List"
+    }, {
+      "path": "/slider",
+      "title": "Slider"
     }]
   }, {
     "groupName": "基础组件",

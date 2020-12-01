@@ -40,6 +40,7 @@ import {
 } from './navbar'
 import WeuiSearchBar from './search-bar'
 import WeuiHalfScreenDialog from './half-screen-dialog'
+import WeuiSlider from './slider'
 
 // 所有组件列表
 const components = [
@@ -70,7 +71,8 @@ const components = [
   WeuiNavbar,
   WeuiNavbarItem,
   WeuiSearchBar,
-  WeuiHalfScreenDialog
+  WeuiHalfScreenDialog,
+  WeuiSlider
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {
