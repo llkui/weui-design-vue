@@ -11,7 +11,7 @@
   </weui-grid>
 </template>
 <script>
-  import tabbar from '../assets/icon_tabbar.png'
+  import tabbar from './../assets/icon_tabbar.png'
   export default {
     data() {
       return {

@@ -68,7 +68,10 @@
     }]
   }, {
     "groupName": "搜索相关",
-    "list": []
+    "list": [{
+      "path": "/search-bar",
+      "title": "SearchBar"
+    }]
   }, {
     "groupName": "层级规范",
     "list": []

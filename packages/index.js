@@ -38,6 +38,7 @@ import {
   WeuiNavbar,
   WeuiNavbarItem
 } from './navbar'
+import WeuiSearchBar from './search-bar'
 
 // 所有组件列表
 const components = [
@@ -66,7 +67,8 @@ const components = [
   WeuiTabbar,
   WeuiTabbarItem,
   WeuiNavbar,
-  WeuiNavbarItem
+  WeuiNavbarItem,
+  WeuiSearchBar
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {
