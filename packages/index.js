@@ -34,6 +34,7 @@ import {
   WeuiMsgFooterLink
 } from './msg'
 import WeuiArticle from './article'
+import WeuiBadge from './badge'
 import {
   WeuiTabbar,
   WeuiTabbarItem
@@ -73,6 +74,7 @@ const components = [
   WeuiMsg,
   WeuiMsgFooterLink,
   WeuiArticle,
+  WeuiBadge,
   WeuiTabbar,
   WeuiTabbarItem,
   WeuiNavbar,
