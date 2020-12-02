@@ -1,0 +1,34 @@
+[{
+  "name": "form",
+  "groups": [{
+    "groupName": "表单",
+    "list": [{
+      "path": "/form-page",
+      "title": "Form page"
+    }, {
+      "path": "/form-input-status",
+      "title": "Form Input Status"
+    }, {
+      "path": "/form-vcode",
+      "title": "Form Vcode"
+    }, {
+      "path": "/form-checkbox",
+      "title": "Form Checkbox"
+    }, {
+      "path": "/form-radio",
+      "title": "Form Radio"
+    }, {
+      "path": "/form-switch",
+      "title": "Form Switch"
+    }, {
+      "path": "/form-select",
+      "title": "Form Select"
+    }, {
+      "path": "/form-select-primary",
+      "title": "Form Select Primary"
+    }, {
+      "path": "/form-textarea",
+      "title": "Form Textarea"
+    }]
+  }]
+}]

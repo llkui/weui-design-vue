@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import navConfig from './routerCon'
+import formConfig from './routerForm'
 
 Vue.use(Router)
 
@@ -31,6 +32,7 @@ const docsRoutefun = navConfig => {
   return route
 }
 const docsRoute = docsRoutefun(navConfig)
+const formsRoute = docsRoutefun(formConfig)
 
 export default new Router({
   mode: 'history',
@@ -38,5 +40,5 @@ export default new Router({
   routes: [{
     path: '/',
     redirect: '/button'
-  }, ...docsRoute]
+  }, ...docsRoute, ...formsRoute]
 })

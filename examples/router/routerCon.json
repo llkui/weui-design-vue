@@ -9,6 +9,9 @@
       "path": "/button",
       "title": "Button"
     }, {
+      "path": "/form",
+      "title": "Form"
+    }, {
       "path": "/list",
       "title": "List"
     }, {
