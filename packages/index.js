@@ -21,6 +21,7 @@ import {
 import WeuiIcon from './icon'
 import WeuiLoadmore from './loadmore'
 import WeuiLoading from './loading'
+import WeuiPanel from './panel'
 import {
   WeuiPreview,
   WeuiPreviewItem
@@ -65,6 +66,7 @@ const components = [
   WeuiIcon,
   WeuiLoadmore,
   WeuiLoading,
+  WeuiPanel,
   WeuiPreview,
   WeuiPreviewItem,
   WeuiDialog,

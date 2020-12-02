@@ -1,7 +1,7 @@
 [{
   "name": "vue weui",
   "groups": [{
-    "groupName": "组件（23/27）",
+    "groupName": "组件（24/27）",
     "list": []
   }, {
     "groupName": "表单",
@@ -44,6 +44,9 @@
     }, {
       "path": "/loadmore",
       "title": "Loadmore"
+    }, {
+      "path": "/panel",
+      "title": "Panel"
     }, {
       "path": "/preview",
       "title": "Preview"

@@ -31,7 +31,7 @@
     <a
       v-if="isLink"
       class="weui-cell weui-cell_access weui-cell_example"
-      href="javascript:"
+      href="javascript:" @click="clickLink()"
     >
       <div class="weui-cell__hd">
         <img
@@ -72,5 +72,10 @@ export default {
       default: false,
     },
   },
+  methods: {
+    clickLink() {
+      this.$emit('click');
+    }
+  }
 };
 </script>
