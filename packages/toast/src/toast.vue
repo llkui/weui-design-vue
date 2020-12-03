@@ -42,7 +42,6 @@ export default {
       this.show(value)
     },
     show: function (value) {
-      console.log(value);
       this.text = value
       this.visible = true
       setTimeout(() => {

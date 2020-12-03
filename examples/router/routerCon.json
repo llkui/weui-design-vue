@@ -72,6 +72,9 @@
       "path": "/msg",
       "title": "Msg"
     }, {
+      "path": "/picker",
+      "title": "Picker"
+    }, {
       "path": "/toast",
       "title": "Toast"
     }, {

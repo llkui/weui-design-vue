@@ -51,6 +51,7 @@ import WeuiProgress from './progress'
 import {
   WeuiTextarea
 } from './form'
+import WeuiPicker from './picker'
 
 // 所有组件列表
 const components = [
@@ -88,7 +89,8 @@ const components = [
   WeuiHalfScreenDialog,
   WeuiSlider,
   WeuiProgress,
-  WeuiTextarea
+  WeuiTextarea,
+  WeuiPicker
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {
