@@ -49,7 +49,15 @@ import WeuiHalfScreenDialog from './half-screen-dialog'
 import WeuiSlider from './slider'
 import WeuiProgress from './progress'
 import {
-  WeuiTextarea
+  WeuiForm,
+  WeuiFormGroup,
+  WeuiInput,
+  WeuiRadio,
+  WeuiRadioGroup,
+  WeuiCheckbox,
+  WeuiCheckboxGroup,
+  WeuiTextarea,
+  WeuiSwitch,
 } from './form'
 import WeuiPicker from './picker'
 
@@ -90,7 +98,16 @@ const components = [
   WeuiSlider,
   WeuiProgress,
   WeuiTextarea,
-  WeuiPicker
+  WeuiPicker,
+  WeuiForm,
+  WeuiFormGroup,
+  WeuiInput,
+  WeuiRadio,
+  WeuiRadioGroup,
+  WeuiCheckbox,
+  WeuiCheckboxGroup,
+  WeuiTextarea,
+  WeuiSwitch,
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {
