@@ -1,4 +1,4 @@
-## form
+## checkbox
 
 :::demo
 
