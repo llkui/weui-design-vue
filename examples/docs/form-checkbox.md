@@ -34,27 +34,15 @@ export default {
 
 ## Attributes
 
-### form
+### checkbox-group
 
 | 参数  | 说明 | 类型    | 可选值 | 默认值 |
 | ----- | ---- | ------ | ------ | ------ |
-| title | 标题 | string | -      | -      |
-| desc | 描述 | string | -      | -      |
+| name | 标识符 | string | -      | -      |
+| value | 当前输入的值 | array | - | - |
 
-### form-group
-
-| 参数  | 说明 | 类型    | 可选值 | 默认值 |
-| ----- | ---- | ------ | ------ | ------ |
-| title | 标题 | string | -      | -      |
-
-### input
+### checkbox
 
 | 参数  | 说明 | 类型    | 可选值 | 默认值 |
 | ----- | ---- | ------ | ------ | ------ |
-| label | 标签 | string | -      | -      |
 | value | 当前输入的值 | string | - | - |
-| type | 类型 | string | text/number | - |
-| placeholder | 输入框为空时占位符 | string | - | - |
-| readonly | 只读 | boolean | true/false | false |
-| autofocus | 自动聚焦 | boolean | true/false | false |
-| maxlength | 最大输入长度，设置为 -1 的时候不限制最大长度 | number | - | -1 |
