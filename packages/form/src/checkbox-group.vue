@@ -1,16 +1,13 @@
 <template>
-  <div class="weui-cells_radio">
+  <div class="weui-cells_checkbox">
     <slot></slot>
   </div>
 </template>
 <script>
 export default {
-  name: "WeuiRadioGroup",
+  name: "WeuiCheckboxGroup",
   props: {
-    value: {
-      type: String,
-      default: null,
-    },
+    value: {},
     name: {
       type: String,
       default: null,
