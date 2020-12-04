@@ -6,6 +6,7 @@
 <template>
   <weui-button @click.native="show()">单列选择器</weui-button>
   <weui-button @click.native="showTwo()">多列选择器</weui-button>
+  <weui-button @click.native="showDate()">日期选择器</weui-button>
 </template>
 <script>
   export default {
@@ -48,6 +49,17 @@
           default: [5, 2]
         }
         this.$picker.show(config).then((res) => {
+          console.log(res)
+        })
+      },
+      showDate: function() {
+        const config = {
+          title: '日期选择器',
+          start: '2016-12-29',
+          end: '2030-2-2',
+          default: [2017, 7, 9],
+        }
+        this.$picker.showDate(config).then((res) => {
           console.log(res)
         })
       }
