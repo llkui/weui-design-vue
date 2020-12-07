@@ -1,0 +1,22 @@
+{
+  "name": "weui-design-vue",
+  "version": "0.1.0-beta",
+  "private": false,
+  "description": "A Mobile UI components based on Weui Design and Vue",
+  "homepage": "https://llkui.github.io/weui-design-vue",
+  "repository": "https://github.com/llkui/weui-design-vue",
+  "main": "lib/weui-design-vue.umd.min.js",
+  "author": "llkui",
+  "keywords": [
+    "component",
+    "vue",
+    "mobile",
+    "weui"
+  ],
+  "license": "MIT",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

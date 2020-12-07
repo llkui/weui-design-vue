@@ -62,6 +62,8 @@ import {
 import WeuiPicker from './picker'
 import WeuiUploader from './uploader'
 
+import './weui.css'
+
 // 所有组件列表
 const components = [
   WeuiButton,

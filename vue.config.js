@@ -2,6 +2,7 @@ const path = require('path')
 const md = require('markdown-it')() // 引入markdown-it
 
 module.exports = {
+  publicPath: '/weui-design-vue/',
   // 修改pages入口
   pages: {
     index: {

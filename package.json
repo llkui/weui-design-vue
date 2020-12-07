@@ -1,12 +1,16 @@
 {
-  "name": "vue-weui",
-  "version": "0.1.0",
-  "private": true,
-  "description": "基于 weui 的vue版本组件库",
-  "main": "lib/vue-weui.umd.min.js",
+  "name": "weui-design-vue",
+  "version": "0.1.0-beta",
+  "private": false,
+  "description": "A Mobile UI components based on Weui Design and Vue",
+  "homepage": "https://llkui.github.io/weui-design-vue",
+  "repository": "https://github.com/llkui/weui-design-vue",
+  "main": "lib/weui-design-vue.umd.min.js",
   "author": "llkui",
   "keywords": [
+    "component",
     "vue",
+    "mobile",
     "weui"
   ],
   "license": "MIT",
@@ -14,7 +18,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name vue-weui --dest lib packages/index.js"
+    "lib": "vue-cli-service build --target lib --name weui-design-vue --dest publish/lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",

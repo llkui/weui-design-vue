@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import VueWeui from '../packages'
+import WeuiDesignVue from '../packages'
 import DemoBlock from './components/DemoBlock.vue'
 import './assets/common.scss' // 公共样式
-import './assets/weui.css' // weui样式
+import '../packages/weui.css' // weui样式
 import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai-sublime.css'
 
@@ -15,7 +15,7 @@ router.afterEach(() => {
   })
 })
 
-Vue.use(VueWeui)
+Vue.use(WeuiDesignVue)
 Vue.component('DemoBlock', DemoBlock)
 Vue.config.productionTip = false
 
