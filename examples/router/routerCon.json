@@ -17,6 +17,9 @@
     }, {
       "path": "/slider",
       "title": "Slider"
+    }, {
+      "path": "/uploader",
+      "title": "Uploader"
     }]
   }, {
     "groupName": "基础组件",

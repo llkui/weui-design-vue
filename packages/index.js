@@ -60,6 +60,7 @@ import {
   WeuiSwitch,
 } from './form'
 import WeuiPicker from './picker'
+import WeuiUploader from './uploader'
 
 // 所有组件列表
 const components = [
@@ -108,6 +109,7 @@ const components = [
   WeuiCheckboxGroup,
   WeuiTextarea,
   WeuiSwitch,
+  WeuiUploader,
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {

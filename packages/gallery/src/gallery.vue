@@ -1,11 +1,11 @@
 <template>
-  <div class="weui-gallery" style="display: block" v-if="show">
+  <div class="weui-gallery" style="display: block" v-if="show" @click="$emit('click')">
     <span
       class="weui-gallery__img"
       :style="'background-image: url(' + img + ')'"
     ></span>
     <div class="weui-gallery__opr" v-if="canDelete">
-      <a href="javascript:" class="weui-gallery__del" @click="deleteGallery()">
+      <a href="javascript:" class="weui-gallery__del" @click.stop="deleteGallery()">
         <i class="weui-icon-delete weui-icon_gallery-delete"></i>
       </a>
     </div>
