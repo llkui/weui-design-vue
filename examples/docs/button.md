@@ -1,6 +1,6 @@
 ## type
 
-:::demo type: 默认primary
+:::demo
 
 ```html
 <weui-button>页面主操作</weui-button>
@@ -12,7 +12,7 @@
 
 ## loading
 
-:::demo loading: 默认false
+:::demo
 
 ```html
 <weui-button :loading="true">页面主操作</weui-button>
@@ -24,7 +24,7 @@
 
 ## disabled
 
-:::demo disabled: 默认false
+:::demo
 
 ```html
 <weui-button :disabled="true">页面主操作</weui-button>
@@ -75,3 +75,4 @@
 | disabled | 是否禁用状态   | boolean | —                        | false   |
 | block    | 是否为块级元素 | boolean | —                        | false   |
 | mini     | 是否为mini状态 | boolean | —                        | false   |
+| icon     | 按钮图标       | string  | —                        | —       |

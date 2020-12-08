@@ -1,11 +1,20 @@
 <template>
   <div :class="inputClass">
-    <div class="weui-cell__hd">
-      <label class="weui-label"> {{ label }} </label>
+    <div class="weui-cell__hd" v-if="label">
+      <label class="weui-label">{{ label }}</label>
     </div>
     <div class="weui-cell__bd">
-      <input id="js_input" class="weui-input" :placeholder="placeholder" :type="type" :pattern="pattern" v-bind:value="value"
-        :readonly="readonly" :maxlength="maxlength" :autofocus="autofocus" v-on:input="$emit('input', $event.target.value)"/>
+      <input
+        :autofocus="autofocus"
+        :maxlength="maxlength"
+        :pattern="pattern"
+        :placeholder="placeholder"
+        :readonly="readonly"
+        :type="type"
+        class="weui-input"
+        v-bind:value="value"
+        v-on:input="$emit('input', $event.target.value)"
+      />
     </div>
     <div class="weui-cell__ft" v-if="rightSlot">
       <slot></slot>
@@ -20,12 +29,16 @@ export default {
       inputClass: ''
     }
   },
+  model: {
+    prop: 'value',
+    event: 'input'
+  },
   props: {
     label: {
       type: String,
       default: null,
     },
-    value:  {
+    value: {
       type: String,
       default: null,
     },
@@ -37,7 +50,7 @@ export default {
       type: String,
       default: null,
     },
-    pattern:  {
+    pattern: {
       type: String,
       default: null,
     },

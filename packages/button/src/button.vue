@@ -41,8 +41,18 @@ export default {
       default: false
     }
   },
+  watch: {
+    disabled: function () {
+      this.getClass()
+    }
+  },
   mounted: function () {
     this.$nextTick(function () {
+      this.getClass()
+    })
+  },
+  methods: {
+    getClass: function () {
       let btnClass = '';
       if (!this.block) {
         btnClass += 'weui-btn'
@@ -74,7 +84,7 @@ export default {
         }
       }
       this.btnClass = btnClass
-    })
+    }
   }
 }
 </script>
