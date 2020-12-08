@@ -13,7 +13,7 @@
         :type="type"
         class="weui-input"
         v-bind:value="value"
-        v-on:input="$emit('input', $event.target.value)"
+        v-on:input="input($event)"
       />
     </div>
     <div class="weui-cell__ft" v-if="rightSlot">
@@ -23,15 +23,16 @@
 </template>
 <script>
 export default {
-  name: "WeuiInput",
-  data () {
+  name: 'WeuiInput',
+  data() {
     return {
-      inputClass: ''
+      inputClass: '',
+      curError: this.error,
     }
   },
   model: {
     prop: 'value',
-    event: 'input'
+    event: 'input',
   },
   props: {
     label: {
@@ -66,6 +67,10 @@ export default {
       type: Number,
       default: -1,
     },
+    error: {
+      type: Boolean,
+      default: false,
+    },
     rightSlot: {
       type: Boolean,
       default: false,
@@ -73,15 +78,39 @@ export default {
   },
   mounted: function () {
     this.$nextTick(function () {
-      let inputClass = 'weui-cell weui-cell_active';
+      this.getClass()
+    })
+  },
+  watch: {
+    error: function (newVal) {
+      this.curError = newVal
+      this.getClass()
+    },
+    curError: function (newVal) {
+      this.$emit('update:error', newVal)
+    },
+  },
+  methods: {
+    getClass: function () {
+      let inputClass = 'weui-cell weui-cell_active'
+      if (this.curError) {
+        inputClass += ' weui-cell_warn'
+      }
       if (this.readonly) {
-        inputClass += 'weui-cell_readonly'
+        inputClass += ' weui-cell_readonly'
       }
       if (this.rightSlot) {
-        inputClass += 'weui-cell_vcode'
+        inputClass += ' weui-cell_vcode'
       }
       this.inputClass = inputClass
-    })
-  }
-};
+    },
+    input: function ($event) {
+      if (this.curError) {
+        this.curError = false
+        this.getClass()
+      }
+      this.$emit('input', $event.target.value)
+    },
+  },
+}
 </script>
