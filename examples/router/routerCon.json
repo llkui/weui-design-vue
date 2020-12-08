@@ -1,4 +1,13 @@
 [{
+  "path": "/introduce",
+  "title": "Weui Design of Vue"
+}, {
+  "path": "/getting-started",
+  "title": "快速上手"
+}, {
+  "path": "/changelog",
+  "title": "更新日志"
+}, {
   "name": "vue weui",
   "groups": [{
     "groupName": "组件（27/27）",

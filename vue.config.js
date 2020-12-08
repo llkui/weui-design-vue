@@ -61,7 +61,7 @@ module.exports = {
               prevToken &&
               prevToken.nesting === 1 &&
               prevToken.info.trim().match(/^demo\s*(.*)$/)
-            if (token.info === 'html' && isInDemoContainer) {
+            if ((token.info === 'html' || token.info === 'bash') && isInDemoContainer) {
               return `<template slot="highlight"><pre v-pre><code class="html">${md.utils.escapeHtml(
                 token.content
               )}</code></pre></template>`
