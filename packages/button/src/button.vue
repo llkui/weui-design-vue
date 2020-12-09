@@ -39,6 +39,10 @@ export default {
     mini: {
       type: Boolean,
       default: false
+    },
+    inForm: {
+      type: Boolean,
+      default: false
     }
   },
   watch: {
@@ -54,34 +58,42 @@ export default {
   methods: {
     getClass: function () {
       let btnClass = '';
-      if (!this.block) {
-        btnClass += 'weui-btn'
-        if (this.type) {
-          btnClass += ' weui-btn_' + this.type
-        }
-        if (this.mini) {
-          btnClass += ' weui-btn_mini'
-        }
-        if (this.loading) {
-          btnClass += ' weui-btn_loading'
-        }
-        if (this.disabled) {
-          btnClass += ' weui-btn_disabled'
+      if (this.type !== 'text') {
+        if (!this.block) {
+          btnClass += 'weui-btn'
+          if (this.type) {
+            btnClass += ' weui-btn_' + this.type
+          }
+          if (this.mini) {
+            btnClass += ' weui-btn_mini'
+          }
+          if (this.loading) {
+            btnClass += ' weui-btn_loading'
+          }
+          if (this.disabled) {
+            btnClass += ' weui-btn_disabled'
+          }
+          if (this.inForm) {
+            btnClass += ' weui-vcode-btn'
+          }
+        } else {
+          btnClass += 'weui-btn_cell'
+          if (this.type) {
+            btnClass += ' weui-btn_cell-' + this.type
+          }
+          if (this.mini) {
+            btnClass += ' weui-btn_mini'
+          }
+          if (this.loading) {
+            btnClass += ' weui-btn_loading'
+          }
+          if (this.disabled) {
+            btnClass += ' weui-btn_disabled'
+          }
         }
       } else {
-        btnClass += 'weui-btn_cell'
-        if (this.type) {
-          btnClass += ' weui-btn_cell-' + this.type
-        }
-        if (this.mini) {
-          btnClass += ' weui-btn_mini'
-        }
-        if (this.loading) {
-          btnClass += ' weui-btn_loading'
-        }
-        if (this.disabled) {
-          btnClass += ' weui-btn_disabled'
-        }
+        // text为透明按钮，只显示里面的内容
+        btnClass = 'weui-btn_reset weui-btn_icon'
       }
       this.btnClass = btnClass
     }

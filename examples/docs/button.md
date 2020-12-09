@@ -68,11 +68,12 @@
 
 ## Attributes
 
-| 参数     | 说明           | 类型    | 可选值                   | 默认值  |
-| -------- | -------------- | ------- | ------------------------ | ------- |
-| type     | 类型           | string  | primary / default / warn | primary |
-| loading  | 是否加载中状态 | boolean | —                        | false   |
-| disabled | 是否禁用状态   | boolean | —                        | false   |
-| block    | 是否为块级元素 | boolean | —                        | false   |
-| mini     | 是否为mini状态 | boolean | —                        | false   |
-| icon     | 按钮图标       | string  | —                        | —       |
+| 参数     | 说明                       | 类型    | 可选值                                | 默认值  |
+| -------- | -------------------------- | ------- | ------------------------------------- | ------- |
+| type     | 类型                       | string  | primary / default / warn / text(透明) | primary |
+| loading  | 是否加载中状态             | boolean | —                                     | false   |
+| disabled | 是否禁用状态               | boolean | —                                     | false   |
+| block    | 是否为块级元素             | boolean | —                                     | false   |
+| mini     | 是否为mini状态             | boolean | —                                     | false   |
+| icon     | 按钮图标                   | string  | —                                     | —       |
+| in-form  | 是否用于form内部(样式适应) | string  | —                                     | —       |

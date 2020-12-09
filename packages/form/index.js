@@ -3,6 +3,7 @@ import WeuiFormGroup from './src/group'
 import WeuiFormTip from './src/tip'
 import WeuiFormOpr from './src/opr'
 import WeuiFormExtra from './src/extra'
+import WeuiCheckboxAgree from './src/checkbox-agree'
 import WeuiInput from './src/input'
 import WeuiRadio from './src/radio'
 import WeuiRadioGroup from './src/radio-group'
@@ -18,6 +19,7 @@ WeuiForm.install = vue => {
   vue.component(WeuiFormTip.name, WeuiFormTip)
   vue.component(WeuiFormOpr.name, WeuiFormOpr)
   vue.component(WeuiFormExtra.name, WeuiFormExtra)
+  vue.component(WeuiCheckboxAgree.name, WeuiCheckboxAgree)
   vue.component(WeuiInput.name, WeuiInput)
   vue.component(WeuiRadio.name, WeuiRadio)
   vue.component(WeuiRadioGroup.name, WeuiRadioGroup)
@@ -33,6 +35,7 @@ export {
   WeuiFormTip,
   WeuiFormOpr,
   WeuiFormExtra,
+  WeuiCheckboxAgree,
   WeuiInput,
   WeuiRadio,
   WeuiRadioGroup,

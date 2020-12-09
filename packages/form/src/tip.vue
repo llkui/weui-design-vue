@@ -1,13 +1,14 @@
 <template>
   <div class="weui-form__tips-area">
-    <p class="weui-form__tips">{{value}}</p>
+    <p class="weui-form__tips" v-if="content">{{content}}</p>
+    <slot name="content"></slot>
   </div>
 </template>
 <script>
 export default {
   name: 'WeuiFormTip',
   props: {
-    value: {
+    content: {
       type: String,
       default: null
     }

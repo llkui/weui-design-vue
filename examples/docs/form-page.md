@@ -10,11 +10,11 @@
       <weui-input :placeholder="'填写本人微信号的昵称'" :label="'昵称'"></weui-input>
       <weui-input :placeholder="'填写绑定的电话号码'" :label="'联系电话'" :type="'number'" :pattern="'[0-9]*'"></weui-input>
     </weui-form-group>
-    <weui-form-tip :value="'表单页提示，居中对齐'"></weui-form-tip>
+    <weui-form-tip :content="'表单页提示，居中对齐'"></weui-form-tip>
     <weui-form-opr>
       <weui-button :disabled="wechat.length == 0 ? true : false">确定</weui-button>
     </weui-form-opr>
-    <weui-form-tip :value="'表单页提示，居中对齐'"></weui-form-tip>
+    <weui-form-tip :content="'表单页提示，居中对齐'"></weui-form-tip>
     <weui-form-extra>
       <weui-footer>
         <weui-footer-links>
@@ -55,9 +55,9 @@
 
 ### form-tip
 
-| 参数  | 说明 | 类型   | 可选值 | 默认值 |
-| ----- | ---- | ------ | ------ | ------ |
-| value | 提示 | string | —      | —      |
+| 参数    | 说明 | 类型          | 可选值 | 默认值 |
+| ------- | ---- | ------------- | ------ | ------ |
+| content | 提示 | string / slot | —      | —      |
 
 ### form-opr
 

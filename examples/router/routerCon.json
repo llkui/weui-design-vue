@@ -51,8 +51,8 @@
       "path": "/grid",
       "title": "Grid"
     }, {
-      "path": "/icon",
-      "title": "Icon"
+      "path": "/icons",
+      "title": "Icons"
     }, {
       "path": "/loading",
       "title": "Loading"

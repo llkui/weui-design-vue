@@ -13,27 +13,32 @@ export default {
     type: {
       type: String,
       default: 'success'
+    },
+    mini: {
+      type: Boolean,
+      default: false
     }
   },
   mounted: function () {
     this.$nextTick(function () {
-      let iconClass = '';
+      let iconClass = ''
       switch (this.type) {
-        case 'info':
-          iconClass = 'weui-icon-info weui-icon_msg'
-          break;
         case 'warn-primary':
-          iconClass = 'weui-icon-warn weui-icon_msg-primary'
-          break;
-        case 'warn':
-          iconClass = 'weui-icon-warn weui-icon_msg'
-          break;
-        case 'waiting':
-          iconClass = 'weui-icon-waiting weui-icon_msg'
-          break;
+          iconClass = 'weui-icon-warn'
+          break
         default:
-          iconClass = 'weui-icon-success weui-icon_msg'
-          break;
+          iconClass = 'weui-icon-' + this.type
+          break
+      }
+      if (!this.mini) {
+        switch (this.type) {
+          case 'warn-primary':
+            iconClass += ' weui-icon_msg-primary'
+            break
+          default:
+            iconClass += ' weui-icon_msg'
+            break
+        }
       }
       this.iconClass = iconClass
     })
