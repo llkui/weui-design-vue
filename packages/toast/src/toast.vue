@@ -2,7 +2,10 @@
   <div :style="visible ? 'opacity: 1;' : 'opacity: 0; display: none;'">
     <div class="weui-mask_transparent"></div>
     <div :class="type == 'info' ? 'weui-toast_text' : ''" class="weui-toast">
-      <i class="weui-icon-success-no-circle weui-icon_toast" v-if="type == 'success'"></i>
+      <i
+        class="weui-icon-success-no-circle weui-icon_toast"
+        v-if="type == 'success'"
+      ></i>
       <i class="weui-icon-warn weui-icon_toast" v-else-if="type == 'warn'"></i>
       <span
         class="weui-primary-loading weui-primary-loading_transparent weui-icon_toast"
@@ -10,44 +13,51 @@
       >
         <span class="weui-primary-loading__dot"></span>
       </span>
-      <p class="weui-toast__content">{{text}}</p>
+      <p class="weui-toast__content">{{ text }}</p>
     </div>
   </div>
 </template>
 <script>
 export default {
   name: 'WeuiToast',
-  data () {
+  data() {
     return {
       text: '',
       type: '',
-      visible: false
+      visible: false,
     }
   },
   methods: {
-    success: function (value) {
+    success: function (text, config) {
       this.type = 'success'
-      this.show(value)
+      this.show(text, config)
     },
-    warn: function (value) {
+    warn: function (text, config) {
       this.type = 'warn'
-      this.show(value)
+      this.show(text, config)
     },
-    loading: function (value) {
+    loading: function (text, config) {
       this.type = 'loading'
-      this.show(value)
+      this.show(text, config)
     },
-    info: function (value) {
+    info: function (text, config) {
       this.type = 'info'
-      this.show(value)
+      this.show(text, config)
     },
-    show: function (value) {
-      this.text = value
+    show: function (text, config) {
+      this.text = text
       this.visible = true
-      setTimeout(() => {
-        this.visible = false
-      }, 3000);
-    }
-  }
+      const duration =
+        config && config.duration !== undefined ? config.duration : 2000
+      if (duration !== 0) {
+        setTimeout(() => {
+          this.visible = false
+        }, duration)
+      }
+    },
+    hide: function () {
+      this.visible = false
+    },
+  },
 }
 </script>

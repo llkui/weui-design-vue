@@ -1,5 +1,8 @@
 <template>
-  <div :class="search ? 'weui-search-bar_focusing' : ''" class="weui-search-bar">
+  <div
+    :class="search ? 'weui-search-bar_focusing' : ''"
+    class="weui-search-bar"
+  >
     <form class="weui-search-bar__form">
       <div class="weui-search-bar__box">
         <i class="weui-icon-search"></i>
@@ -9,27 +12,42 @@
           ref="searchInput"
           required
           type="search"
-          v-model="text"
-          v-on:input="input()"
+          v-bind:value="value"
+          v-on:input="$emit('input', $event.target.value)"
+          v-on:blur="blur()"
         />
-        <a @click="searchClear()" class="weui-icon-clear" href="javascript:"></a>
+        <a
+          @click="searchClear()"
+          class="weui-icon-clear"
+          href="javascript:"
+        ></a>
       </div>
       <label @click="searchText()" class="weui-search-bar__label">
         <i class="weui-icon-search"></i>
         <span>搜索</span>
       </label>
     </form>
-    <a @click="searchCancel()" class="weui-search-bar__cancel-btn" href="javascript:">取消</a>
+    <a
+      @click="searchCancel()"
+      class="weui-search-bar__cancel-btn"
+      href="javascript:"
+      >取消</a
+    >
   </div>
 </template>
 <script>
 export default {
   name: 'WeuiSearchBar',
-  data () {
+  data() {
     return {
       search: false,
-      text: ''
     }
+  },
+  props: {
+    value: {
+      type: String,
+      default: null,
+    },
   },
   methods: {
     searchText: function () {
@@ -37,16 +55,18 @@ export default {
       this.$refs.searchInput.focus()
     },
     searchCancel: function () {
-      this.text = ''
       this.search = false
+      this.$emit('input', '')
     },
     searchClear: function () {
-      this.text = ''
       this.$refs.searchInput.focus()
+      this.$emit('input', '')
     },
-    input: function () {
-      this.$emit('input', this.text)
-    }
-  }
+    blur: function () {
+      if (this.value.length === 0) {
+        this.search = false
+      }
+    },
+  },
 }
 </script>

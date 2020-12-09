@@ -9,10 +9,12 @@
 #### Features
 
 - input: 支持v-model双向绑定
-- 增加 `form-tip` `form-opr` `from-extra` `checkbox-agree` 组件
+- 增加 `form-tip` `form-opr` `from-extra` `checkbox-agree` `select` 组件
 - input: 增加error错误状态
 - button: 增加inForm属性
 - icon: 增加mini属性
+- radio: 增加showMore、moreText和more event
+- toast、toptips: 增加cofnig配置，可设置自动关闭时长
 
 ### 0.1.0-beta
 

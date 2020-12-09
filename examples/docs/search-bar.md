@@ -4,13 +4,18 @@
 
 ```html
 <template>
-  <weui-search-bar @input="input($event)"></weui-search-bar>
+  <weui-search-bar v-model="value" @input="input()"></weui-search-bar>
 </template>
 <script>
   export default {
+    data() {
+      return {
+        value: ''
+      }
+    },
     methods: {
-      input: function(e) {
-        console.log(e)
+      input: function() {
+        console.log(this.value)
       }
     }
   }
@@ -19,8 +24,8 @@
 
 :::
 
-## Event
+## Attribute
 
-| 事件名称 | 说明             | 回调参数    |
-| -------- | ---------------- | ----------- |
-| input    | 获得用户输入内容 | function(e) |
+| 参数           | 说明     | 类型   | 可选值 | 默认值 |
+| -------------- | -------- | ------ | ------ | ------ |
+| value(v-model) | 搜索内容 | string | —      | —      |
