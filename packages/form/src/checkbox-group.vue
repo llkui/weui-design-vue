@@ -15,11 +15,6 @@ export default {
       type: String,
       default: null,
     },
-  },
-  watch: {
-    value(value) {
-      this.$emit('change', value);
-    }
   }
 };
 </script>

@@ -6,16 +6,17 @@
 <template>
 <weui-form :title="'模拟选择框'" :desc="'用于丰富原生选择框结构，使其更具有扩展性'">
   <weui-form-group>
-    <div class="weui-cell weui-cell_active weui-cell_access weui-cell_select weui-cell_select-before">
-      <div class="weui-cell__hd" id="showPhone" @click="showPhone()"><label class="weui-label"> {{value1.label}} </label></div>
-      <div class="weui-cell__bd">
+    <weui-select-group :isPicker="true" :placement="'after'" :showHeader="false" @clickBody="showDate()">
+      <template #body>{{date}}</template>
+    </weui-select-group>
+    <weui-select-group :label="value1.label" :isPicker="true" @clickHeader="showPhone()">
+      <template #body>
         <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入号码" value="12345678907">
-      </div>
-    </div>
-    <div class="weui-cell weui-cell_active weui-cell_access weui-cell_select weui-cell_select-after">
-      <div class="weui-cell__hd"><label class="weui-label">票种</label></div>
-      <div class="weui-cell__bd" id="showPicker" @click="showPicker()"> {{value2.label}} </div>
-    </div>
+      </template>
+    </weui-select-group>
+    <weui-select-group :label="'票种'" :isPicker="true" :placement="'after'" @clickBody="showPicker()">
+      <template #body>{{value2.label}}</template>
+    </weui-select-group>
   </weui-form-group>
 </weui-form>
 <weui-picker :show="visible" :options="options" :selectedI="5"></weui-picker>
@@ -26,11 +27,23 @@
       return {
         visible: false,
         options: [],
+        date: '日期',
         value1: { label: '+86', value: ''},
         value2: { label: '飞机票', value: ''},
       }
     },
     methods: {
+      showDate: function() {
+        const config = {
+          title: '多列选择器',
+          start: '2000-01-01',
+          end: '2026-12-12',
+          default: [2020, 12, 9]
+        }
+        this.$picker.showDate(config).then((res) => {
+          this.date = res
+        })
+      },
       showPhone: function() {
         this.options = [
           { label: '+86', value: '1', disabled: false },
@@ -60,7 +73,7 @@
           default: 0
         }
         this.$picker.show(config).then((res) => {
-          this.value2 = res;
+          this.value2 = res[0];
         })
       }
     }

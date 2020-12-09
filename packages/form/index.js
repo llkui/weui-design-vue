@@ -9,6 +9,9 @@ import WeuiRadio from './src/radio'
 import WeuiRadioGroup from './src/radio-group'
 import WeuiCheckbox from './src/checkbox'
 import WeuiCheckboxGroup from './src/checkbox-group'
+import WeuiSelect from './src/select'
+import WeuiOption from './src/option'
+import WeuiSelectGroup from './src/select-group'
 import WeuiTextarea from './src/textarea'
 import WeuiSwitch from './src/switch'
 
@@ -25,6 +28,9 @@ WeuiForm.install = vue => {
   vue.component(WeuiRadioGroup.name, WeuiRadioGroup)
   vue.component(WeuiCheckbox.name, WeuiCheckbox)
   vue.component(WeuiCheckboxGroup.name, WeuiCheckboxGroup)
+  vue.component(WeuiSelect.name, WeuiSelect)
+  vue.component(WeuiOption.name, WeuiOption)
+  vue.component(WeuiSelectGroup.name, WeuiSelectGroup)
   vue.component(WeuiTextarea.name, WeuiTextarea)
   vue.component(WeuiSwitch.name, WeuiSwitch)
 }
@@ -41,6 +47,9 @@ export {
   WeuiRadioGroup,
   WeuiCheckbox,
   WeuiCheckboxGroup,
+  WeuiSelect,
+  WeuiOption,
+  WeuiSelectGroup,
   WeuiTextarea,
   WeuiSwitch,
 }
