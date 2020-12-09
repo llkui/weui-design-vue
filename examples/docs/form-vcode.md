@@ -85,4 +85,4 @@
 | 参数           | 说明     | 类型    | 可选值 | 默认值 |
 | -------------- | -------- | ------- | ------ | ------ |
 | value(v-model) | 是否选择 | boolean | -      | false  |
-| animate        | 提醒动画 | boolean | -      | false  |
+| animate(sync)  | 提醒动画 | boolean | -      | false  |
