@@ -29,9 +29,8 @@ export default {
       default: null,
     },
     value:  {
-      type: String,
-      default: null,
-    },
+      type: [String, Number],
+    }
   },
   watch: {
     value(val) {
@@ -41,18 +40,18 @@ export default {
   computed: {
     currentValue: {
       get() {
-        return this.$parent.value.indexOf(this.value) !== -1
+        return this.$parent.value.findIndex(item => item == this.value) !== -1
       },
 
       set(val) {
         const parentValue = this.$parent.value.slice();
           if (val) {
-            if (parentValue.indexOf(this.value) === -1) {
+            if (parentValue.findIndex(item => item == this.value) === -1) {
               parentValue.push(this.value);
               this.$parent.$emit('input', parentValue);
             }
           } else {
-            const index = parentValue.indexOf(this.value);
+            const index = parentValue.findIndex(item => item == this.value);
             if (index !== -1) {
               parentValue.splice(index, 1);
               this.$parent.$emit('input', parentValue);

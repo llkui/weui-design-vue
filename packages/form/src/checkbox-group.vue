@@ -7,7 +7,10 @@
 export default {
   name: "WeuiCheckboxGroup",
   props: {
-    value: {},
+    value: {
+      type: Array,
+      default: () => [],
+    },
     name: {
       type: String,
       default: null,
