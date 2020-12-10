@@ -6,7 +6,6 @@
 <template>
   <weui-button type="default" @click.native="show('ios')">iOS ActionSheet</weui-button>
   <weui-button type="default" @click.native="show('android')">Android ActionSheet</weui-button>
-  <weui-action-sheet></weui-action-sheet>
 </template>
 <script>
   export default {
@@ -33,7 +32,9 @@
 
 :::
 
-## config
+## $actionSheet.show(config, menus)
+
+### config
 
 | 参数         | 说明                 | 类型    | 可选值        | 默认值 |
 | ------------ | -------------------- | ------- | ------------- | ------ |

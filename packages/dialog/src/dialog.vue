@@ -17,6 +17,7 @@
           @click="ok()"
           class="weui-dialog__btn weui-dialog__btn_primary"
           href="javascript:"
+          v-if="okText || showOk"
         >{{okText}}</a>
       </div>
     </div>
@@ -35,6 +36,10 @@ export default {
       default: 'ios'
     },
     showCancel: {
+      type: Boolean,
+      default: true
+    },
+    showOk: {
       type: Boolean,
       default: true
     },
@@ -57,10 +62,10 @@ export default {
   },
   methods: {
     cancel: function () {
-      this.$emit('onCancel', false)
+      this.$emit('onCancel')
     },
     ok: function () {
-      this.$emit('onOk', true)
+      this.$emit('onOk')
     }
   }
 }

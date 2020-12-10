@@ -1,22 +1,27 @@
-## msg and msg-footer-link
+## msg
 
 :::demo
 
 ```html
-<weui-msg title="操作成功" footerText="Copyright © 2008-2016 weui.io">
+<weui-msg title="操作成功">
   <template slot="desc">
     内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现
-    <a href="javascript:">文字链接</a>
-  </template>
-  <template slot="tips">
-    提示详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现
     <a href="javascript:">文字链接</a>
   </template>
   <template slot="btn">
     <weui-button>推荐操作</button>
   </template>
-  <template slot="footerLinks">
-    <weui-msg-footer-link>底部链接文本</weui-msg-footer-link>
+  <template slot="tips">
+    提示详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现
+    <a href="javascript:">文字链接</a>
+  </template>
+  <template slot="extra">
+    <weui-footer>
+      <weui-footer-links>
+        <weui-footer-link>底部链接文本</weui-footer-link>
+      </weui-footer-links>
+      <weui-footer-text>Copyright © 2008-2016 weui.io</weui-footer-text>
+    </weui-footer>
   </template>
 </weui-msg>
 ```
@@ -28,7 +33,7 @@
 :::demo
 
 ```html
-<weui-msg type="warn" title="操作失败" footerText="Copyright © 2008-2016 weui.io">
+<weui-msg type="warn" title="操作失败">
   <template slot="desc">
     内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现
     <a href="javascript:">文字链接</a>
@@ -40,8 +45,13 @@
   <template slot="btn">
     <weui-button type="default">辅助操作</button>
   </template>
-  <template slot="footerLinks">
-    <weui-msg-footer-link>底部链接文本</weui-msg-footer-link>
+  <template slot="extra">
+    <weui-footer>
+      <weui-footer-links>
+        <weui-footer-link>底部链接文本</weui-footer-link>
+      </weui-footer-links>
+      <weui-footer-text>Copyright © 2008-2016 weui.io</weui-footer-text>
+    </weui-footer>
   </template>
 </weui-msg>
 ```
@@ -100,5 +110,4 @@
 | desc        | 描述     | string / slot | —              | —       |
 | descPrimary | 描述提示 | string / slot | —              | —       |
 | tips        | 提示文本 | string / slot | —              | —       |
-| footerLinks | 底部链接 | slot          | —              | —       |
-| footerText  | 底部文本 | string        | —              | —       |
+| extra       | 底部区域 | slot          | —              | —       |

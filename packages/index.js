@@ -37,10 +37,7 @@ import WeuiDialog from './dialog'
 import WeuiTopTips from './toptips'
 import WeuiToast from './toast'
 import WeuiActionSheet from './action-sheet'
-import {
-  WeuiMsg,
-  WeuiMsgFooterLink
-} from './msg'
+import WeuiMsg from './msg'
 import WeuiArticle from './article'
 import WeuiBadge from './badge'
 import {
@@ -108,7 +105,6 @@ const components = [
   WeuiToast,
   WeuiActionSheet,
   WeuiMsg,
-  WeuiMsgFooterLink,
   WeuiArticle,
   WeuiBadge,
   WeuiTabbar,

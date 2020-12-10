@@ -125,20 +125,20 @@ export default {
   methods: {
     close: function () {
       if (this.maskClosable) {
-        this.$emit('close', true)
+        this.$emit('onClose')
       }
     },
     back: function () {
-      this.$emit('back', true)
+      this.$emit('onBack')
     },
     more: function () {
-      this.$emit('more', true)
+      this.$emit('onMore')
     },
     onCancel: function () {
-      this.$emit('onCancel', true)
+      this.$emit('onCancel')
     },
     onOk: function () {
-      this.$emit('onOk', true)
+      this.$emit('onOk')
     }
   }
 }

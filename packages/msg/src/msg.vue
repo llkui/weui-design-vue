@@ -1,20 +1,18 @@
 <template>
   <div class="weui-msg">
     <div class="weui-msg__icon-area">
-      <i v-if="type == 'success'" class="weui-icon-success weui-icon_msg"></i>
-      <i v-else-if="type == 'warn'" class="weui-icon-warn weui-icon_msg"></i>
+      <i class="weui-icon-success weui-icon_msg" v-if="type == 'success'"></i>
+      <i class="weui-icon-warn weui-icon_msg" v-else-if="type == 'warn'"></i>
     </div>
     <div class="weui-msg__text-area">
-      <h2 v-if="title" class="weui-msg__title">
-        {{ title }}
-      </h2>
+      <h2 class="weui-msg__title" v-if="title">{{ title }}</h2>
       <p class="weui-msg__desc">
         <template v-if="desc">{{ desc }}</template>
-        <slot v-if="!desc" name="desc"></slot>
+        <slot name="desc" v-if="!desc"></slot>
       </p>
       <p class="weui-msg__desc-primary">
         <template v-if="descPrimary">{{ descPrimary }}</template>
-        <slot v-if="!descPrimary" name="descPrimary"></slot>
+        <slot name="descPrimary" v-if="!descPrimary"></slot>
       </p>
     </div>
     <div class="weui-msg__opr-area">
@@ -25,16 +23,11 @@
     <div class="weui-msg__tips-area">
       <p class="weui-msg__tips">
         <template v-if="tips">{{ tips }}</template>
-        <slot v-if="!tips" name="tips"></slot>
+        <slot name="tips" v-if="!tips"></slot>
       </p>
     </div>
     <div class="weui-msg__extra-area">
-      <div class="weui-footer">
-        <p class="weui-footer__links">
-          <slot name="footerLinks"></slot>
-        </p>
-        <p class="weui-footer__text">{{ footerText }}</p>
-      </div>
+      <slot name="extra"></slot>
     </div>
   </div>
 </template>
@@ -61,11 +54,7 @@ export default {
     tips: {
       type: String,
       default: null,
-    },
-    footerText: {
-      type: String,
-      default: null,
-    },
+    }
   },
   methods: {
     clickBtn: function () {
