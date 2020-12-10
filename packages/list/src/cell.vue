@@ -1,61 +1,43 @@
 <template>
-  <div>
-    <div v-if="isSwipe" class="weui-cell weui-cell_swiped" weui-swipe>
-      <div class="weui-cell__bd" style="transform: translateX(-68px)">
-        <div class="weui-cell">
-          <div class="weui-cell__bd">
-            <p>{{ title }}</p>
-          </div>
-          <div class="weui-cell__ft">{{ label }}</div>
+  <div :class="cellClass" @click="clickLink()">
+    <div class="weui-cell__hd" v-if="icon">
+      <img :src="icon" alt style="width: 20px; margin-right: 16px; display: block" />
+    </div>
+    <div class="weui-cell__bd" ref="body">
+      <p v-if="!isSwipe">{{title}}</p>
+      <div class="weui-cell" v-if="isSwipe">
+        <div class="weui-cell__bd">
+          <p>{{ title }}</p>
         </div>
-      </div>
-      <div class="weui-cell__ft">
-        <a class="weui-swiped-btn weui-swiped-btn_warn" href="javascript:"
-          >删除</a
-        >
+        <div class="weui-cell__ft">{{ value }}</div>
       </div>
     </div>
-    <div v-if="!isLink && !isSwipe" class="weui-cell weui-cell_example">
-      <div class="weui-cell__hd">
-        <img
-          :src="icon"
-          alt=""
-          style="width: 20px; margin-right: 16px; display: block"
-        />
-      </div>
-      <div class="weui-cell__bd">
-        <p>{{ title }}</p>
-      </div>
-      <div class="weui-cell__ft">{{ label }}</div>
+    <div class="weui-cell__ft">
+      <template v-if="!isSwipe">{{value}}</template>
+      <a
+        @click="clickBtn()"
+        class="weui-swiped-btn weui-swiped-btn_warn"
+        href="javascript:"
+        ref="btn"
+        v-if="isSwipe"
+      >{{swipeText}}</a>
     </div>
-    <a
-      v-if="isLink"
-      class="weui-cell weui-cell_access weui-cell_example"
-      href="javascript:" @click="clickLink()"
-    >
-      <div class="weui-cell__hd">
-        <img
-          :src="icon"
-          alt=""
-          style="width: 20px; margin-right: 16px; display: block"
-        />
-      </div>
-      <div class="weui-cell__bd">
-        <p>{{ title }}</p>
-      </div>
-      <div class="weui-cell__ft">{{ label }}</div>
-    </a>
   </div>
 </template>
 <script>
 export default {
   name: "WeuiCell", // 注意这个name是必须的
+  data () {
+    return {
+      cellClass: ''
+    }
+  },
   props: {
     title: {
       type: String,
       default: null,
     },
-    label: {
+    value: {
       type: String,
       default: null,
     },
@@ -71,10 +53,40 @@ export default {
       type: Boolean,
       default: false,
     },
+    swipeText: {
+      type: String,
+      default: '删除'
+    }
+  },
+  mounted: function () {
+    this.$nextTick(function () {
+      this.getClass()
+      this.getSwipe()
+    })
   },
   methods: {
-    clickLink() {
+    getClass: function () {      let cellClass = 'weui-cell'
+      if (this.isSwipe) {
+        cellClass += ' weui-cell_swiped'
+      }
+      if (this.isLink) {
+        cellClass += ' weui-cell_access'
+      }
+      this.cellClass = cellClass
+    },
+    getSwipe: function () {
+      if (this.isSwipe) {
+        setTimeout(() => {
+          const width = this.$refs.btn.offsetWidth
+          this.$refs.body.style.transform = `translateX(-${width}px)`
+        }, 0)
+      }
+    },
+    clickLink: function () {
       this.$emit('click');
+    },
+    clickBtn: function () {
+      this.$emit('clickBtn')
     }
   }
 };

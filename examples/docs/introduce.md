@@ -14,7 +14,7 @@
 
 ### 当前版本(暂时不建议用在生产环境中)
 
-[`npm v0.1.0-beta`](https://www.npmjs.com/package/weui-design-vue)
+[![npm package](https://img.shields.io/npm/v/weui-design-vue.svg?style=flat-square)](https://www.npmjs.com/package/weui-design-vue)
 
 ### 支持 Vue 版本
 
