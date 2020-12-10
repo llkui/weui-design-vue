@@ -1,12 +1,15 @@
-import WeuiCellList from './src/list'
+import WeuiCellGroupTitle from './src/group-title'
+import WeuiCellGroup from './src/group'
 import WeuiCell from './src/cell'
 
-WeuiCellList.install = vue => {
-  vue.component(WeuiCellList.name, WeuiCellList)
+WeuiCellGroup.install = vue => {
+  vue.component(WeuiCellGroupTitle.name, WeuiCellGroupTitle)
+  vue.component(WeuiCellGroup.name, WeuiCellGroup)
   vue.component(WeuiCell.name, WeuiCell)
 }
 
 export {
-  WeuiCellList,
+  WeuiCellGroupTitle,
+  WeuiCellGroup,
   WeuiCell
 }

@@ -1,6 +1,7 @@
 import WeuiButton from './button'
 import {
-  WeuiCellList,
+  WeuiCellGroupTitle,
+  WeuiCellGroup,
   WeuiCell
 } from './list'
 import {
@@ -74,7 +75,8 @@ import './weui.css'
 // 所有组件列表
 const components = [
   WeuiButton,
-  WeuiCellList,
+  WeuiCellGroupTitle,
+  WeuiCellGroup,
   WeuiCell,
   WeuiFlex,
   WeuiFlexItem,

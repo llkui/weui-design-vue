@@ -15,7 +15,7 @@
 - icon: 增加mini属性
 - radio: 增加showMore、moreText属性和more事件回调
 - toast、toptips: 增加cofnig配置，可设置自动关闭时长
-- list: 增加swipeText属性和clickBtn事件回调
+- list: 增加label、is-active、swipeText属性和clickBtn事件回调
 
 ### 0.1.0-beta
 

@@ -5,6 +5,6 @@
 </template>
 <script>
 export default {
-  name: "WeuiCellList", // 注意这个name是必须的
+  name: 'WeuiCellGroup',
 };
 </script>

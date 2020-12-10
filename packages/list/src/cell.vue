@@ -1,10 +1,20 @@
 <template>
   <div :class="cellClass" @click="clickLink()">
-    <div class="weui-cell__hd" v-if="icon">
-      <img :src="icon" alt style="width: 20px; margin-right: 16px; display: block" />
+    <div class="weui-cell__hd">
+      <img :src="icon" alt style="width: 20px; margin-right: 16px; display: block" v-if="icon" />
+      <template v-if="!icon">
+        <slot name="label"></slot>
+      </template>
     </div>
     <div class="weui-cell__bd" ref="body">
-      <p v-if="!isSwipe">{{title}}</p>
+      <template v-if="!isSwipe">
+        <template v-if="title">
+          <p>{{title}}</p>
+        </template>
+        <template v-if="!title">
+          <slot name="title"></slot>
+        </template>
+      </template>
       <div class="weui-cell" v-if="isSwipe">
         <div class="weui-cell__bd">
           <p>{{ title }}</p>
@@ -13,7 +23,12 @@
       </div>
     </div>
     <div class="weui-cell__ft">
-      <template v-if="!isSwipe">{{value}}</template>
+      <template v-if="!isSwipe">
+        <template v-if="value">{{value}}</template>
+        <template v-if="!value">
+          <slot name="value"></slot>
+        </template>
+      </template>
       <a
         @click="clickBtn()"
         class="weui-swiped-btn weui-swiped-btn_warn"
@@ -26,7 +41,7 @@
 </template>
 <script>
 export default {
-  name: "WeuiCell", // 注意这个name是必须的
+  name: 'WeuiCell',
   data () {
     return {
       cellClass: ''
@@ -49,6 +64,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    isActive: {
+      type: Boolean,
+      default: false
+    },
     isSwipe: {
       type: Boolean,
       default: false,
@@ -65,9 +84,13 @@ export default {
     })
   },
   methods: {
-    getClass: function () {      let cellClass = 'weui-cell'
+    getClass: function () {
+      let cellClass = 'weui-cell'
       if (this.isSwipe) {
         cellClass += ' weui-cell_swiped'
+      }
+      if (this.isActive) {
+        cellClass += ' weui-cell_active'
       }
       if (this.isLink) {
         cellClass += ' weui-cell_access'
