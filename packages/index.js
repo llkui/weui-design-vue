@@ -30,7 +30,8 @@ import {
 } from './panel'
 import {
   WeuiPreview,
-  WeuiPreviewItem
+  WeuiPreviewItem,
+  WeuiPreviewButton
 } from './preview'
 import WeuiDialog from './dialog'
 import WeuiTopTips from './toptips'
@@ -101,6 +102,7 @@ const components = [
   WeuiMediaInfoMeta,
   WeuiPreview,
   WeuiPreviewItem,
+  WeuiPreviewButton,
   WeuiDialog,
   WeuiTopTips,
   WeuiToast,

@@ -8,8 +8,8 @@
   <weui-preview-item label="标题标题" value="名字名字名字"></weui-preview-item>
   <weui-preview-item label="标题标题" value="很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字"></weui-preview-item>
   <template #footer>
-    <a class="weui-form-preview__btn weui-form-preview__btn_default" href="javascript:">辅助操作</a>
-    <a class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">操作</a>
+    <weui-preview-button :type="'default'">辅助操作</weui-preview-button>
+    <weui-preview-button>操作</weui-preview-button>
   </template>
 </weui-preview>
 ```
@@ -19,14 +19,29 @@
 
 ### preview
 
-| 参数  | 说明 | 类型    | 可选值 | 默认值 |
-| ----- | ---- | ------ | ------ | ------ |
-| label | 标签 | string | -      | -      |
-| value | 内容 | string | -      | -      |
+| 参数   | 说明         | 类型   | 可选值 | 默认值 |
+| ------ | ------------ | ------ | ------ | ------ |
+| label  | 标签         | string | -      | -      |
+| value  | 内容         | string | -      | -      |
+| footer | 底部操作区域 | slot   | -      | -      |
 
 ### preview-item
 
-| 参数  | 说明           | 类型   | 可选值 | 默认值 |
+| 参数  | 说明 | 类型   | 可选值 | 默认值 |
 | ----- | ---- | ------ | ------ | ------ |
 | label | 标签 | string | -      | -      |
 | value | 内容 | string | -      | -      |
+
+### preview-button
+
+| 参数 | 说明 | 类型   | 可选值            | 默认值  |
+| ---- | ---- | ------ | ----------------- | ------- |
+| type | 类型 | string | primary / default | primary |
+
+## Event
+
+### preview-button
+
+| 事件名称 | 说明         | 回调参数   |
+| -------- | ------------ | ---------- |
+| onClick  | 点击事件回调 | function() |
