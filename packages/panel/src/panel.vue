@@ -6,10 +6,11 @@
     </div>
     <div class="weui-panel__ft" v-if="isLink">
       <a
+        @click="clickLink()"
+        class="weui-cell weui-cell_active weui-cell_access weui-cell_link"
         href="javascript:"
-        class="weui-cell weui-cell_active weui-cell_access weui-cell_link" @click="clickLink()"
       >
-        <div class="weui-cell__bd">查看更多</div>
+        <div class="weui-cell__bd">{{linkText}}</div>
         <span class="weui-cell__ft"></span>
       </a>
     </div>
@@ -27,10 +28,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    linkText: {
+      type: String,
+      default: '查看更多'
+    }
   },
   methods: {
-    clickLink() {
-      this.$emit('click');
+    clickLink () {
+      this.$emit('onLink');
     }
   }
 };

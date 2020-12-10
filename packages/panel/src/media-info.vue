@@ -1,10 +1,10 @@
 <template>
-  <div class="weui-grids">
+  <ul class="weui-media-box__info">
     <slot></slot>
-  </div>
+  </ul>
 </template>
 <script>
 export default {
-  name: 'WeuiGrid',
+  name: 'WeuiMediaInfo'
 }
 </script>

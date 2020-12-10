@@ -37,3 +37,12 @@
 ```
 
 :::
+
+## Attributes
+
+| 参数    | 说明           | 类型    | 可选值 | 默认值 |
+| ------- | -------------- | ------- | ------ | ------ |
+| tip     | 提示内容       | string  | —      | —      |
+| loading | 是否加载中     | boolean | —      | false  |
+| line    | 是否显示分割线 | boolean | —      | false  |
+| dot     | 是否显示圆点   | boolean | —      | false  |

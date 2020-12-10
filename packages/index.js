@@ -22,7 +22,12 @@ import {
 import WeuiIcon from './icon'
 import WeuiLoadmore from './loadmore'
 import WeuiLoading from './loading'
-import WeuiPanel from './panel'
+import {
+  WeuiPanel,
+  WeuiMedia,
+  WeuiMediaInfo,
+  WeuiMediaInfoMeta
+} from './panel'
 import {
   WeuiPreview,
   WeuiPreviewItem
@@ -91,6 +96,9 @@ const components = [
   WeuiLoadmore,
   WeuiLoading,
   WeuiPanel,
+  WeuiMedia,
+  WeuiMediaInfo,
+  WeuiMediaInfoMeta,
   WeuiPreview,
   WeuiPreviewItem,
   WeuiDialog,

@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  name: 'WeuiGridItem', // 注意这个name是必须的
+  name: 'WeuiGridItem',
   props: {
     icon: {
       type: String,

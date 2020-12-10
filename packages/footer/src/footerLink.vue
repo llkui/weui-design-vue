@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="weui-footer__link">
+  <a :href="href" @click="click()" class="weui-footer__link">
     <slot></slot>
   </a>
 </template>
@@ -9,6 +9,11 @@ export default {
   props: {
     href: {
       type: String
+    }
+  },
+  methods: {
+    click: function () {
+      this.$emit('click')
     }
   }
 }

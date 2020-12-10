@@ -71,3 +71,11 @@
 ```
 
 :::
+
+### flex
+
+flex布局
+
+### flex-item
+
+flex: 1

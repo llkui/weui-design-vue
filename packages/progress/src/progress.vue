@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     onCancel: function () {
-      this.$emit('onCancel', true)
+      this.$emit('onCancel')
     }
   }
 }
