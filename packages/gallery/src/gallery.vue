@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     deleteGallery() {
-      this.$emit('delete');
+      this.$emit('onDelete');
     }
   }
 };

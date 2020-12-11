@@ -18,7 +18,7 @@
 <template>
   <weui-footer>
     <weui-footer-links>
-      <weui-footer-link @click="show()">底部链接</weui-footer-link>
+      <weui-footer-link @onClick="show()">底部链接</weui-footer-link>
     </weui-footer-links>
     <weui-footer-text>Copyright © 2008-2016 weui.io</weui-footer-text>
   </weui-footer>
@@ -73,4 +73,4 @@
 
 | 事件名称 | 说明         | 回调参数   |
 | -------- | ------------ | ---------- |
-| click    | 点击事件回调 | function() |
+| onClick    | 点击事件回调 | function() |

@@ -7,8 +7,8 @@
 ```html
 <template>
   <weui-cell-group>
-    <weui-cell :title="'标题文字'" :value="'说明文字'" @click="clickCell()"></weui-cell>
-    <weui-cell :title="'标题文字'" :value="'说明文字'" is-swipe @clickBtn="clickBtn()"></weui-cell>
+    <weui-cell :title="'标题文字'" :value="'说明文字'" @onClick="clickCell()"></weui-cell>
+    <weui-cell :title="'标题文字'" :value="'说明文字'" is-swipe @onClickBtn="clickBtn()"></weui-cell>
   </weui-cell-group>
 </template>
 <script>
@@ -93,7 +93,7 @@ cell-group可以为cell提供外边框
 
 ## Event
 
-| 事件名称 | 说明             | 回调参数   |
-| -------- | ---------------- | ---------- |
-| click    | 单元格点击回调   | function() |
-| clickBtn | 滑动按钮点击回调 | function() |
+| 事件名称   | 说明             | 回调参数   |
+| ---------- | ---------------- | ---------- |
+| onClick    | 单元格点击回调   | function() |
+| onClickBtn | 滑动按钮点击回调 | function() |

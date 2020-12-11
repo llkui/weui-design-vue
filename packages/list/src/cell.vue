@@ -106,10 +106,10 @@ export default {
       }
     },
     clickLink: function () {
-      this.$emit('click');
+      this.$emit('onClick');
     },
     clickBtn: function () {
-      this.$emit('clickBtn')
+      this.$emit('onClickBtn')
     }
   }
 };

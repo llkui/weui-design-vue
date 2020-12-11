@@ -5,11 +5,11 @@
 #### Bug Fixes
 
 - button: 修复disabled变更时没有变更样式的问题
+- picker: 修复多次点击后，选择错误的问题
 
 #### Features
 
-- input: 支持v-model双向绑定
-- input: 增加error错误状态
+- input: 支持v-model双向绑定，增加error错误状态
 - button: 增加inForm属性
 - icon: 增加mini属性
 - radio: 增加showMore、moreText属性和more事件回调

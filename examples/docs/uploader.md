@@ -55,24 +55,25 @@ import pic from './../assets/pic.png'
     }
   }
 </script>
+```
 
 :::
 
 ## Attributes
 
-| 参数 | 说明 | 类型   | 可选值 | 默认值 |
-| ---- | ---- | ------ | ------ | ------ |
-| v-model (fileList) | 已上传的文件列表 | FileListItem[] | - | - |
-| title | 标题 | string | -      | -      |
-| showCount | 显示数量 | Boolean | true/false | false |
-| maxCount | 最大数量 | Number | - | 9 |
-| accept | 允许上传的文件类型 | string | - | image/* |
-| multiple | 是否开启图片多选 | boolean | - | false |
-| max-size | 文件大小限制，单位为 byte | number/string | - | - |
-| after-read | 文件读取完成后的回调函数 | Function(e) | - | - |
+| 参数               | 说明                      | 类型           | 可选值     | 默认值  |
+| ------------------ | ------------------------- | -------------- | ---------- | ------- |
+| v-model (fileList) | 已上传的文件列表          | FileListItem[] | -          | -       |
+| title              | 标题                      | string         | -          | -       |
+| showCount          | 显示数量                  | Boolean        | true/false | false   |
+| maxCount           | 最大数量                  | Number         | -          | 9       |
+| accept             | 允许上传的文件类型        | string         | -          | image/* |
+| multiple           | 是否开启图片多选          | boolean        | -          | false   |
+| max-size           | 文件大小限制，单位为 byte | number/string  | -          | -       |
+| after-read         | 文件读取完成后的回调函数  | Function(e)    | -          | -       |
 
-## Events
+## Event
 
-| 参数 | 说明 | 回调参数   |
-| ---- | ---- | ---- |
+| 参数     | 说明                   | 回调参数 |
+| -------- | ---------------------- | -------- |
 | oversize | 文件大小超过限制时触发 | fileItem |
