@@ -1,6 +1,6 @@
 {
   "name": "weui-design-vue",
-  "version": "0.1.0-beta",
+  "version": "0.1.0",
   "private": false,
   "description": "A Mobile UI components based on Weui Design and Vue",
   "homepage": "https://llkui.github.io/weui-design-vue",

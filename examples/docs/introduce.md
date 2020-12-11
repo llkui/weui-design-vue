@@ -9,10 +9,10 @@
 
 ### 支持环境
 
-- `ios 7.0+`
+- `ios 8.0+`
 - `Android 4.4+`
 
-### 当前版本(暂时不建议用在生产环境中)
+### 当前版本
 
 [![npm package](https://img.shields.io/npm/v/weui-design-vue.svg?style=flat-square)](https://www.npmjs.com/package/weui-design-vue)
 
