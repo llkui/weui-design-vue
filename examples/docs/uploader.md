@@ -4,8 +4,14 @@
 
 ```html
 <template>
-  <weui-uploader :afterRead="afterRead" v-model="fileList" @click="preview($event)" showCount title="图片上传" @oversize="oversize($event)"></weui-uploader>
-  <weui-gallery :show="show" :img="img" :canDelete="true" @delete="deleteGallery()" @click="hide()"></weui-gallery>
+  <weui-cell-group>
+    <weui-cell>
+      <template #title>
+        <weui-uploader :afterRead="afterRead" v-model="fileList" @onClick="preview($event)" showCount :multiple="true" @oversize="oversize($event)"></weui-uploader>
+      </template>
+    </weui-cell>
+  </weui-cell-group>
+  <weui-gallery :show="show" :img="img" :canDelete="true" @onDelete="deleteGallery()" @onClick="hide()"></weui-gallery>
 </template>
 <script>
 import pic from './../assets/pic.png'
@@ -22,17 +28,21 @@ import pic from './../assets/pic.png'
             url: pic,
             status: 'failed',
           },
+          {
+            url: pic,
+            status: 'done',
+          },
         ],
         img: '',
       }
     },
     methods: {
       afterRead(file) {
+        console.log(file)
         this.fileList.push({
           url: file.content,
           status: 'done',
-        },
-        )
+        })
       },
       preview($event) {
         this.img = $event.url;
@@ -61,19 +71,31 @@ import pic from './../assets/pic.png'
 
 ## Attributes
 
-| 参数               | 说明                      | 类型           | 可选值     | 默认值  |
-| ------------------ | ------------------------- | -------------- | ---------- | ------- |
-| v-model (fileList) | 已上传的文件列表          | FileListItem[] | -          | -       |
-| title              | 标题                      | string         | -          | -       |
-| showCount          | 显示数量                  | Boolean        | true/false | false   |
-| maxCount           | 最大数量                  | Number         | -          | 9       |
-| accept             | 允许上传的文件类型        | string         | -          | image/* |
-| multiple           | 是否开启图片多选          | boolean        | -          | false   |
-| max-size           | 文件大小限制，单位为 byte | number/string  | -          | -       |
-| after-read         | 文件读取完成后的回调函数  | Function(e)    | -          | -       |
+### uploader
+
+| 参数           | 说明                      | 类型           | 可选值 | 默认值   |
+| -------------- | ------------------------- | -------------- | ------ | -------- |
+| value(v-model) | 已上传的文件列表          | FileListItem[] | —      | —        |
+| title          | 标题                      | string         | —      | 图片上传 |
+| showCount      | 显示数量                  | boolean        | —      | false    |
+| maxCount       | 最大数量                  | number         | —      | 9        |
+| accept         | 允许上传的文件类型        | string         | —      | image/*  |
+| multiple       | 是否开启文件多选          | boolean        | —      | false    |
+| max-size       | 文件大小限制，单位为 byte | number/string  | —      | —        |
+| after-read     | 文件读取完成后的回调函数  | Function(e)    |        | —        |
+| showButton     | 是否展示上传按钮          | boolean        |        | true     |
+
+### FileListItem
+
+| 参数   | 说明         | 类型   | 可选值                    | 默认值 |
+| ------ | ------------ | ------ | ------------------------- | ------ |
+| url    | 文件路径     | string | —                         | —      |
+| status | 文件上传状态 | string | uploading / failed / done | —      |
+
 
 ## Event
 
-| 参数     | 说明                   | 回调参数 |
-| -------- | ---------------------- | -------- |
-| oversize | 文件大小超过限制时触发 | fileItem |
+| 参数       | 说明                     | 回调参数 |
+| ---------- | ------------------------ | -------- |
+| onClick    | 点击文件事件回调         | fileItem |
+| onOversize | 文件大小超过限制事件回调 | fileItem |

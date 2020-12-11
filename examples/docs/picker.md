@@ -4,9 +4,9 @@
 
 ```html
 <template>
-  <weui-button @click.native="show()">单列选择器</weui-button>
-  <weui-button @click.native="showTwo()">多列选择器</weui-button>
-  <weui-button @click.native="showDate()">日期选择器</weui-button>
+  <weui-button @click="show()">单列选择器</weui-button>
+  <weui-button @click="showTwo()">多列选择器</weui-button>
+  <weui-button @click="showDate()">日期选择器</weui-button>
 </template>
 <script>
   export default {

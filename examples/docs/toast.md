@@ -4,10 +4,10 @@
 
 ```html
 <template>
-  <weui-button type="default" @click.native="success()">成功提示</weui-button>
-  <weui-button type="default" @click.native="warn()">失败提示</weui-button>
-  <weui-button type="default" @click.native="loading()">加载中提示</weui-button>
-  <weui-button type="default" @click.native="info()">文字提示</weui-button>
+  <weui-button type="default" @click="success()">成功提示</weui-button>
+  <weui-button type="default" @click="warn()">失败提示</weui-button>
+  <weui-button type="default" @click="loading()">加载中提示</weui-button>
+  <weui-button type="default" @click="info()">文字提示</weui-button>
 </template>
 <script>
   export default {

@@ -5,7 +5,7 @@
 ```html
 <template>
   <weui-textarea v-model="username" placeholder="请描述你所发生的问题" :rows="3" :maxlength="10"></weui-textarea>
-  <weui-button @click.native="show()">show</weui-button>
+  <weui-button @click="show()">show</weui-button>
 </template>
 <script>
   export default {

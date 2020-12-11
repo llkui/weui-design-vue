@@ -1,56 +1,43 @@
 <template>
-  <div class="weui-cells weui-cells_form">
-    <div class="weui-cell weui-cell_uploader">
-      <div class="weui-cell__bd">
-        <div class="weui-uploader">
-          <div class="weui-uploader__hd" v-if="showCount || title">
-            <p class="weui-uploader__title">{{ title }}</p>
-            <div class="weui-uploader__info" v-if="showCount">
-              {{ value.length }}/{{ maxCount }}
-            </div>
-          </div>
-          <div class="weui-uploader__bd">
-            <ul class="weui-uploader__files" id="uploaderFiles">
-              <template v-for="(file, index) in value">
-                <li
-                  :key="index"
-                  :class="
+  <div class="weui-uploader">
+    <div class="weui-uploader__hd" v-if="showCount || title">
+      <p class="weui-uploader__title">{{ title }}</p>
+      <div class="weui-uploader__info" v-if="showCount">{{ value.length }}/{{ maxCount }}</div>
+    </div>
+    <div class="weui-uploader__bd">
+      <ul class="weui-uploader__files">
+        <template v-for="(file, index) in value">
+          <li
+            :class="
                     file.status === 'failed' || file.status === 'uploading'
                       ? 'weui-uploader__file weui-uploader__file_status'
                       : 'weui-uploader__file'
                   "
-                  :style="'background-image: url(' + file.url + ')'"
-                  @click="preview(file)"
-                >
-                  <div
-                    class="weui-uploader__file-content"
-                    v-if="file.status === 'failed'"
-                  >
-                    <i class="weui-icon-warn"></i>
-                  </div>
-                  <div
-                    class="weui-uploader__file-content"
-                    v-if="file.status === 'uploading'"
-                    style="font-size: 12px"
-                  >
-                    上传中...
-                  </div>
-                </li>
-              </template>
-            </ul>
-            <div class="weui-uploader__input-box">
-              <div class="weui-uploader__input-box">
-                <input
-                  ref="input"
-                  class="weui-uploader__input"
-                  type="file"
-                  :accept="accept"
-                  :multiple="multiple"
-                  @change="onChange"
-                />
-              </div>
+            :key="index"
+            :style="'background-image: url(' + file.url + ')'"
+            @click="preview(file)"
+          >
+            <div class="weui-uploader__file-content" v-if="file.status === 'failed'">
+              <i class="weui-icon-warn"></i>
             </div>
-          </div>
+            <div
+              class="weui-uploader__file-content"
+              style="font-size: 12px"
+              v-else-if="file.status === 'uploading'"
+            >上传中...</div>
+          </li>
+        </template>
+      </ul>
+      <div class="weui-uploader__input-box" v-if="showButton && value.length < maxCount">
+        <div class="weui-uploader__input-box">
+          <input
+            :accept="accept"
+            :multiple="multiple"
+            @change="onChange"
+            class="weui-uploader__input"
+            ref="input"
+            type="file"
+          />
         </div>
       </div>
     </div>
@@ -58,10 +45,13 @@
 </template>
 <script>
 export default {
-  name: "WeuiUploader", // 注意这个name是必须的
+  name: 'WeuiUploader',
   props: {
     afterRead: Function,
-    title: String,
+    title: {
+      type: String,
+      default: '图片上传'
+    },
     accept: {
       type: String,
       default: 'image/*',
@@ -81,14 +71,18 @@ export default {
       type: Boolean,
       default: false,
     },
+    showButton: {
+      type: Boolean,
+      default: true
+    }
   },
   watch: {
-    value(val) {
-      this.$emit("change", val);
+    value (val) {
+      this.$emit('input', val);
     },
   },
   methods: {
-    onChange(event) {
+    onChange (event) {
       let { files } = event.target;
       if (!files.length) {
         return;
@@ -125,7 +119,7 @@ export default {
       }
     },
     // 读取文件
-    readFile(file) {
+    readFile (file) {
       return new Promise((resolve) => {
         // 可读blob或者file流
         const reader = new FileReader();
@@ -137,18 +131,18 @@ export default {
         reader.readAsDataURL(file);
       });
     },
-    onAfterRead(files, oversize) {
+    onAfterRead (files, oversize) {
       if (oversize) {
-        this.$emit("oversize", files);
+        this.$emit('onOversize', files);
       } else {
         // 读完文件后的操作
         this.afterRead && this.afterRead(files);
         // 重置input
-        this.$refs.input && (this.$refs.input.value = "");
+        this.$refs.input && (this.$refs.input.value = '');
       }
     },
-    preview(file) {
-      this.$emit("click", file);
+    preview (file) {
+      this.$emit('onClick', file);
     },
   },
 };

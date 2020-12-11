@@ -2,7 +2,7 @@
   <div class="weui-form-preview">
     <div class="weui-form-preview__hd">
       <div class="weui-form-preview__item">
-        <label class="weui-form-preview__label"> {{ label }}</label>
+        <label class="weui-form-preview__label">{{ label }}</label>
         <em class="weui-form-preview__value">{{ value }}</em>
       </div>
     </div>
@@ -16,7 +16,7 @@
 </template>
 <script>
 export default {
-  name: "WeuiPreview", // 注意这个name是必须的
+  name: 'WeuiPreview',
   props: {
     label: {
       type: String,

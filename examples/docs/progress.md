@@ -8,7 +8,7 @@
     <weui-progress :percent="progress1" @onCancel="cancel()"></weui-progress>
     <weui-progress :percent="progress2" :showCancel="false"></weui-progress>
     <weui-progress :percent="progress3" @onCancel="cancel()"></weui-progress>
-    <weui-button @click.native="upload()" :disabled="isLoading">上传</weui-button>
+    <weui-button @click="upload()" :disabled="isLoading">上传</weui-button>
   </div>
 </template>
 <script>
@@ -58,6 +58,7 @@
           }
 
           if(complete >= 3) {
+            this.isLoading = false
             clearInterval(uploadInterval)
           }
         }, 20)

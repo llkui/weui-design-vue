@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-  name: "WeuiPreviewItem", // 注意这个name是必须的
+  name: 'WeuiPreviewItem',
   props: {
     label: {
       type: String,

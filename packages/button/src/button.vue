@@ -1,5 +1,5 @@
 <template>
-  <a :class="btnClass">
+  <a :class="btnClass" @click="click($event)">
     <span class="weui-primary-loading weui-primary-loading_transparent" v-if="loading">
       <i class="weui-primary-loading__dot"></i>
     </span>
@@ -96,6 +96,11 @@ export default {
         btnClass = 'weui-btn_reset weui-btn_icon'
       }
       this.btnClass = btnClass
+    },
+    click: function (e) {
+      if (!this.disabled) {
+        this.$emit('click', e)
+      }
     }
   }
 }

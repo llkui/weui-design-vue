@@ -1,11 +1,8 @@
 <template>
-  <div class="weui-gallery" style="display: block" v-if="show" @click="$emit('click')">
-    <span
-      class="weui-gallery__img"
-      :style="'background-image: url(' + img + ')'"
-    ></span>
+  <div @click="$emit('onClick')" class="weui-gallery" style="display: block" v-if="show">
+    <span :style="'background-image: url(' + img + ')'" class="weui-gallery__img"></span>
     <div class="weui-gallery__opr" v-if="canDelete">
-      <a href="javascript:" class="weui-gallery__del" @click.stop="deleteGallery()">
+      <a @click.stop="deleteGallery()" class="weui-gallery__del" href="javascript:">
         <i class="weui-icon-delete weui-icon_gallery-delete"></i>
       </a>
     </div>
@@ -13,7 +10,7 @@
 </template>
 <script>
 export default {
-  name: "WeuiGallery", // 注意这个name是必须的
+  name: 'WeuiGallery',
   props: {
     img: {
       type: String,
@@ -29,7 +26,7 @@ export default {
     },
   },
   methods: {
-    deleteGallery() {
+    deleteGallery () {
       this.$emit('onDelete');
     }
   }

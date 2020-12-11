@@ -4,8 +4,8 @@
 
 ```html
 <template>
-  <weui-button @click.native="show('custom')" type="default">样式一</weui-button>
-  <weui-button @click.native="show('dialog')" type="default">样式二</weui-button>
+  <weui-button @click="show('custom')" type="default">样式一</weui-button>
+  <weui-button @click="show('dialog')" type="default">样式二</weui-button>
   <weui-half-screen-dialog :visible="custom" type="custom" title="标题" @onClose="close('custom')">
     <template slot="content">
       <br>

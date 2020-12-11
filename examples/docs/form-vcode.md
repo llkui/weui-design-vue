@@ -24,7 +24,7 @@
       </template>
     </weui-form-tip>
     <weui-form-opr>
-      <weui-button :disabled="code.length == 0" @click.native="save()">确定</weui-button>
+      <weui-button :disabled="code.length == 0" @click="save()">确定</weui-button>
     </weui-form-opr>
   </weui-form>
 </template>

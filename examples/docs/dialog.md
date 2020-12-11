@@ -4,10 +4,10 @@
 
 ```html
 <template>
-  <weui-button @click.native="showDialog('ios1')">iOS Dialog样式一</weui-button>
-  <weui-button @click.native="showDialog('ios2')">iOS Dialog样式二</weui-button>
-  <weui-button @click.native="showDialog('android1')">Android Dialog样式一</weui-button>
-  <weui-button @click.native="showDialog('android2')">Android Dialog样式二</weui-button>
+  <weui-button @click="showDialog('ios1')">iOS Dialog样式一</weui-button>
+  <weui-button @click="showDialog('ios2')">iOS Dialog样式二</weui-button>
+  <weui-button @click="showDialog('android1')">Android Dialog样式一</weui-button>
+  <weui-button @click="showDialog('android2')">Android Dialog样式二</weui-button>
   <weui-dialog :visible="isVisible" :type="type" :title="title" :content="content" :cancelText="cancelText" :okText="okText" :showCancel="showCancel" @onCancel="handleCancel($event)" @onOk="handleOk($event)"></weui-dialog>
 </template>
 <script>

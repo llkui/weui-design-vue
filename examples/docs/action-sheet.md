@@ -4,8 +4,8 @@
 
 ```html
 <template>
-  <weui-button type="default" @click.native="show('ios')">iOS ActionSheet</weui-button>
-  <weui-button type="default" @click.native="show('android')">Android ActionSheet</weui-button>
+  <weui-button type="default" @click="show('ios')">iOS ActionSheet</weui-button>
+  <weui-button type="default" @click="show('android')">Android ActionSheet</weui-button>
 </template>
 <script>
   export default {

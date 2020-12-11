@@ -77,3 +77,9 @@
 | mini     | 是否为mini状态             | boolean | —                                     | false   |
 | icon     | 按钮图标                   | string  | —                                     | —       |
 | in-form  | 是否用于form内部(样式适应) | string  | —                                     | —       |
+
+## Event
+
+| 事件名称 | 说明         | 回调参数    |
+| -------- | ------------ | ----------- |
+| click    | 点击事件回调 | function(e) |

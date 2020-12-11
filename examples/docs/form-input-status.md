@@ -13,7 +13,7 @@
       <weui-input :placeholder="'WeUI'" :label="'微信号'" readonly></weui-input>
     </weui-form-group>
     <weui-form-opr>
-      <weui-button :disabled="card.length == 0 ? true : false" @click.native="save()">确定</button>
+      <weui-button :disabled="card.length == 0 ? true : false" @click="save()">确定</button>
     </weui-form-opr>
   </weui-form>
 </template>
