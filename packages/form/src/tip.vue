@@ -1,6 +1,6 @@
 <template>
   <div class="weui-form__tips-area">
-    <p class="weui-form__tips" v-if="content">{{content}}</p>
+    <p class="weui-form__tips" v-if="content" v-html="content"></p>
     <slot name="content"></slot>
   </div>
 </template>

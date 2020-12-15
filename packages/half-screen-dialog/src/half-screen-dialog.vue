@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="weui-half-screen-dialog__bd">
-        <slot name="content"></slot>
+        <slot></slot>
       </div>
     </div>
     <div class="weui-half-screen-dialog weui-half-screen-dialog_show" v-else>

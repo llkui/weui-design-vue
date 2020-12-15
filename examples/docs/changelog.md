@@ -1,5 +1,15 @@
 ## 更新日志
 
+### progress...
+
+#### Bug Fixes
+
+- form-group: 修复样式引入错误
+
+#### Features
+
+- form-tip: content支持html
+- half screen dialog: 插槽移除name引入，改为直接引入
 ### 0.1.0
 
 `2020-12-11`

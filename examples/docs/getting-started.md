@@ -40,10 +40,10 @@ $ npm install --save weui-design-vue
 
 ```bash
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
 import WeuiVue from 'weui-design-vue' +++
 import 'weui-design-vue/lib/weui-design-vue.css' +++
+import App from './App.vue'
+import router from './router'
 
 Vue.config.productionTip = false
 
@@ -54,6 +54,8 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 ```
+
+注意：weui-design-vue.css若放在App下面引入，则weui-design-vue.css样式优先级高于项目样式，所以放在App上面引入
 
 这样就成功在全局引入了 `weui-design-vue`
 

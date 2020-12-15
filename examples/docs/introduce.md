@@ -2,6 +2,10 @@
 
 `weui-design-vue` 是遵循 Weui Design 设计规范的 Vue UI 组件库，主要用于无线业务。
 
+### 扫码体验
+
+![qrcode](./../assets/qrcode.png)
+
 ### 特性
 
 - 开箱即用的高质量 Vue 无线端组件

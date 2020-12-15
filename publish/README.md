@@ -13,10 +13,10 @@ in `src/main.js`
 
 ```bash
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
 import WeuiVue from 'weui-design-vue' +++
 import 'weui-design-vue/lib/weui-design-vue.css' +++
+import App from './App.vue'
+import router from './router'
 
 Vue.config.productionTip = false
 

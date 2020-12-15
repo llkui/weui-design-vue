@@ -4,7 +4,9 @@
       <h2 class="weui-form__title">{{ title }}</h2>
       <div class="weui-form__desc">{{ desc }}</div>
     </div>
-    <slot></slot>
+    <div class="weui-form__control-area">
+      <slot></slot>
+    </div>
   </div>
 </template>
 <script>

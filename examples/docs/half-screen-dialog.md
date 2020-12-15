@@ -7,15 +7,13 @@
   <weui-button @click="show('custom')" type="default">样式一</weui-button>
   <weui-button @click="show('dialog')" type="default">样式二</weui-button>
   <weui-half-screen-dialog :visible="custom" type="custom" title="标题" @onClose="close('custom')">
-    <template slot="content">
-      <br>
-      <br>
-      可放自定义内容
-      <br>
-      <br>
-      <br>
-      <br>
-    </template>
+    <br>
+    <br>
+    可放自定义内容
+    <br>
+    <br>
+    <br>
+    <br>
   </weui-half-screen-dialog>
   <weui-half-screen-dialog :visible="dialog" type="dialog" title="标题" subtitle="标题" desc="辅助描述内容，可根据实际需要安排" tips="辅助提示内容，可根据实际需要安排" :showMore="true" cancelText="辅助操作" okText="主操作" @onClose="close('dialog')">
   </weui-half-screen-dialog>
@@ -47,13 +45,12 @@
 | 参数         | 说明                      | 类型    | 可选值          | 默认值 |
 | ------------ | ------------------------- | ------- | --------------- | ------ |
 | visible      | 是否显示                  | boolean | —               | false  |
+| maskClosable | 点击蒙层是否允许关闭      | boolean | —               | true   |
 | type         | 类型                      | string  | dialog / custom | dialog |
 | title        | 标题                      | string  | —               | —      |
 | subtitle     | 副标题 `dialog`           | string  | —               | —      |
-| content      | 内容 `custom`             | slot    | —               | —      |
 | desc         | 描述 `dialog`             | string  | —               | —      |
 | tips         | 提示 `dialog`             | string  | —               | —      |
-| maskClosable | 点击蒙层是否允许关闭      | boolean | —               | true   |
 | showClose    | 是否显示关闭按钮 `dialog` | boolean | —               | true   |
 | showBack     | 是否显示返回按钮 `dialog` | boolean | —               | false  |
 | showMore     | 是否显示更多按钮 `dialog` | boolean | —               | false  |
