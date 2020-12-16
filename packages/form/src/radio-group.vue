@@ -7,7 +7,7 @@
       href="javascript:"
       v-if="showMore"
     >
-      <div class="weui-cell__bd">{{moreText}}</div>
+      <div class="weui-cell__bd">{{ moreText }}</div>
     </a>
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     more: function () {
-      this.$emit('more', true)
+      this.$emit('onMore')
     }
   }
 };

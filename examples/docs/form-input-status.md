@@ -5,13 +5,15 @@
 ```html
 <template>
   <weui-form :title="'输入框状态'" :desc="'可体验表单输入样式，当输入位数不等于16位的时候点击按钮可看到报错样式。'" >
-    <weui-form-group :title="'表单报错'">
-      <weui-input v-model="card" :placeholder="'请输入16位数卡号'" :label="'卡号'" :maxlength="16" autofocus :error.sync="error"></weui-input>
-    </weui-form-group>
-    <weui-form-group :title="'表单只读、置灰'">
-      <weui-input :placeholder="'1234567'" :label="'EMail'" readonly></weui-input>
-      <weui-input :placeholder="'WeUI'" :label="'微信号'" readonly></weui-input>
-    </weui-form-group>
+    <weui-form-control>
+      <weui-form-group :title="'表单报错'">
+        <weui-input v-model="card" :placeholder="'请输入16位数卡号'" :label="'卡号'" :maxlength="16" autofocus :error.sync="error"></weui-input>
+      </weui-form-group>
+      <weui-form-group :title="'表单只读、置灰'">
+        <weui-input :placeholder="'1234567'" :label="'EMail'" readonly></weui-input>
+        <weui-input :placeholder="'WeUI'" :label="'微信号'" readonly></weui-input>
+      </weui-form-group>
+    </weui-form-control>
     <weui-form-opr>
       <weui-button :disabled="card.length == 0 ? true : false" @click="save()">确定</button>
     </weui-form-opr>

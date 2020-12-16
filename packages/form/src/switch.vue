@@ -1,7 +1,7 @@
 <template>
   <div @click="onClick" class="weui-cell weui-cell_active weui-cell_switch">
     <div class="weui-cell__bd">
-      <slot></slot>
+      {{ label }}
     </div>
     <div class="weui-cell__ft" v-if="!IE">
       <input :checked="value" class="weui-switch" type="checkbox" />
@@ -26,6 +26,7 @@ export default {
       type: Boolean,
       default: false,
     },
+    label: String
   },
   methods: {
     onClick () {

@@ -5,37 +5,39 @@
 ```html
 <template>
   <weui-form :title="'原生选择框'">
-    <weui-form-group>
-      <weui-select :name="'type'" v-model="type" @input="show('type')">
-        <weui-option value="1" label="微信号"></weui-option>
-        <weui-option value="2" label="QQ号"></weui-option>
-        <weui-option value="3" label="Email"></weui-option>
-      </weui-select>
-      <weui-select-group>
-        <template #header>
-          <select class="weui-select" name="select2">
-            <option value="1">+86</option>
-            <option value="2">+80</option>
-            <option value="3">+84</option>
-            <option value="4">+87</option>
-          </select>
-        </template>
-        <template #body>
-          <input
-            class="weui-input"
-            type="number"
-            pattern="[0-9]*"
-            placeholder="请输入号码"
-            value="12345678907"
-          />
-        </template>
-      </weui-select-group>
-      <weui-select :name="'country'" :label="'国家'" v-model="country" @input="show('country')">
-        <weui-option value="1" label="中国"></weui-option>
-        <weui-option value="2" label="美国"></weui-option>
-        <weui-option value="3" label="英国"></weui-option>
-      </weui-select>
-    </weui-form-group>
+    <weui-form-control>
+      <weui-form-group>
+        <weui-select :name="'type'" v-model="type" @input="show('type')">
+          <weui-option value="1" label="微信号"></weui-option>
+          <weui-option value="2" label="QQ号"></weui-option>
+          <weui-option value="3" label="Email"></weui-option>
+        </weui-select>
+        <weui-select-group>
+          <template #header>
+            <select class="weui-select" name="select2">
+              <option value="1">+86</option>
+              <option value="2">+80</option>
+              <option value="3">+84</option>
+              <option value="4">+87</option>
+            </select>
+          </template>
+          <template #body>
+            <input
+              class="weui-input"
+              type="number"
+              pattern="[0-9]*"
+              placeholder="请输入号码"
+              value="12345678907"
+            />
+          </template>
+        </weui-select-group>
+        <weui-select :name="'country'" :label="'国家'" v-model="country" @input="show('country')">
+          <weui-option value="1" label="中国"></weui-option>
+          <weui-option value="2" label="美国"></weui-option>
+          <weui-option value="3" label="英国"></weui-option>
+        </weui-select>
+      </weui-form-group>
+    </weui-form-control>
   </weui-form>
 </template>
 <script>

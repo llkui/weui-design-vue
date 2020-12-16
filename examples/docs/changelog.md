@@ -4,12 +4,19 @@
 
 #### Bug Fixes
 
-- form-group: 修复样式引入错误
-
 #### Features
 
-- form-tip: content支持html
+- form-tip: 增加tipContent属性
 - half screen dialog: 插槽移除name引入，改为直接引入
+- form-checkbox: 增加showMore属性和onMore事件回调
+- form-radio: more回调事件更名为onMore
+- 新增 `form-control` 组件
+
+#### Breaking Changes
+
+- form-radio: 内嵌插槽提取为label属性
+- form-switch: 内嵌插槽提取为label属性
+
 ### 0.1.0
 
 `2020-12-11`

@@ -5,19 +5,21 @@
 ```html
 <template>
 <weui-form :title="'模拟选择框'" :desc="'用于丰富原生选择框结构，使其更具有扩展性'">
-  <weui-form-group>
-    <weui-select-group :isPicker="true" :placement="'after'" :showHeader="false" @clickBody="showDate()">
-      <template #body>{{date}}</template>
-    </weui-select-group>
-    <weui-select-group :label="value1.label" :isPicker="true" @clickHeader="showPhone()">
-      <template #body>
-        <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入号码" value="12345678907">
-      </template>
-    </weui-select-group>
-    <weui-select-group :label="'票种'" :isPicker="true" :placement="'after'" @clickBody="showPicker()">
-      <template #body>{{value2.label}}</template>
-    </weui-select-group>
-  </weui-form-group>
+  <weui-form-control>
+    <weui-form-group>
+      <weui-select-group :isPicker="true" :placement="'after'" :showHeader="false" @clickBody="showDate()">
+        <template #body>{{date}}</template>
+      </weui-select-group>
+      <weui-select-group :label="value1.label" :isPicker="true" @clickHeader="showPhone()">
+        <template #body>
+          <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入号码" value="12345678907">
+        </template>
+      </weui-select-group>
+      <weui-select-group :label="'票种'" :isPicker="true" :placement="'after'" @clickBody="showPicker()">
+        <template #body>{{value2.label}}</template>
+      </weui-select-group>
+    </weui-form-group>
+  </weui-form-control>
 </weui-form>
 <weui-picker :show="visible" :options="options" :selectedI="5"></weui-picker>
 </template>

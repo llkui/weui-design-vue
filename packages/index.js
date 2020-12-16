@@ -54,6 +54,7 @@ import WeuiSlider from './slider'
 import WeuiProgress from './progress'
 import {
   WeuiForm,
+  WeuiFormControl,
   WeuiFormGroup,
   WeuiFormTip,
   WeuiFormOpr,
@@ -118,6 +119,7 @@ const components = [
   WeuiTextarea,
   WeuiPicker,
   WeuiForm,
+  WeuiFormControl,
   WeuiFormGroup,
   WeuiFormTip,
   WeuiFormOpr,

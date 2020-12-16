@@ -1,4 +1,5 @@
 import WeuiForm from './src/form'
+import WeuiFormControl from './src/control'
 import WeuiFormGroup from './src/group'
 import WeuiFormTip from './src/tip'
 import WeuiFormOpr from './src/opr'
@@ -18,6 +19,7 @@ import WeuiSwitch from './src/switch'
 
 WeuiForm.install = vue => {
   vue.component(WeuiForm.name, WeuiForm)
+  vue.component(WeuiFormControl.name, WeuiFormControl)
   vue.component(WeuiFormGroup.name, WeuiFormGroup)
   vue.component(WeuiFormTip.name, WeuiFormTip)
   vue.component(WeuiFormOpr.name, WeuiFormOpr)
@@ -37,6 +39,7 @@ WeuiForm.install = vue => {
 
 export {
   WeuiForm,
+  WeuiFormControl,
   WeuiFormGroup,
   WeuiFormTip,
   WeuiFormOpr,
