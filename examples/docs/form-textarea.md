@@ -4,19 +4,25 @@
 
 ```html
 <template>
-  <weui-textarea v-model="username" placeholder="请描述你所发生的问题" :rows="3" :maxlength="10"></weui-textarea>
-  <weui-button @click="show()">show</weui-button>
+  <weui-form :title="'文本域'" :desc="'输入更多内容的输入区域样式展示'">
+    <weui-form-group :title="'问题描述'">
+      <weui-textarea v-model="question" placeholder="请描述你所发生的问题" :rows="3" :maxlength="10"></weui-textarea>
+    </weui-form-group>
+    <weui-form-opr>
+      <weui-button @click="save()">确定</weui-button>
+    </weui-form-opr>
+  </weui-form>
 </template>
 <script>
   export default {
     data() {
       return {
-        username: ''
+        question: ''
       }
     },
     methods: {
-      show: function() {
-        console.log(this.username)
+      save: function() {
+        console.log(this.question)
       }
     }
   }

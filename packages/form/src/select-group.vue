@@ -1,11 +1,12 @@
 <template>
   <div :class="selectClass">
     <div @click="clickHeader()" class="weui-cell__hd" v-if="showHeader">
-      <label class="weui-label" v-if="label">{{label}}</label>
+      <label class="weui-label" v-if="label">{{ label }}</label>
       <slot name="header" v-if="!label"></slot>
     </div>
     <div @click="clickBody()" class="weui-cell__bd">
-      <slot name="body"></slot>
+      <template v-if="body">{{ body }}</template>
+      <slot name="body" v-if="!body"></slot>
     </div>
   </div>
 </template>
@@ -19,6 +20,10 @@ export default {
   },
   props: {
     label: {
+      type: String,
+      default: null
+    },
+    body: {
       type: String,
       default: null
     },

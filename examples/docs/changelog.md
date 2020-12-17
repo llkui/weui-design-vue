@@ -10,12 +10,15 @@
 - half screen dialog: 插槽移除name引入，改为直接引入
 - form-checkbox: 增加showMore属性和onMore事件回调
 - form-radio: more回调事件更名为onMore
+- form-text: 样式优化
+- select-group: body支持string
 - 新增 `form-control` 组件
 
 #### Breaking Changes
 
 - form-radio: 内嵌插槽提取为label属性
 - form-switch: 内嵌插槽提取为label属性
+- picker: showDate日期控件，默认值由array变更为string[2017, 9, 9]变更为'2017-9-9'
 
 ### 0.1.0
 

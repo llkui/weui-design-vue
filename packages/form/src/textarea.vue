@@ -1,16 +1,18 @@
 <template>
-  <div>
-    <textarea
-      class="weui-textarea"
-      :placeholder="placeholder"
-      :maxlength="maxlength"
-      :rows="rows"
-      v-bind:value="value"
-      v-on:input="$emit('input', $event.target.value)"
-    ></textarea>
-    <div class="weui-textarea-counter" v-if="showCount">
-      <span>{{ value.length }}</span>
-      /{{ maxlength }}
+  <div class="weui-cell">
+    <div class="weui-cell__bd">
+      <textarea
+        class="weui-textarea"
+        :placeholder="placeholder"
+        :maxlength="maxlength"
+        :rows="rows"
+        v-bind:value="value"
+        v-on:input="$emit('input', $event.target.value)"
+      ></textarea>
+      <div class="weui-textarea-counter" v-if="showCount">
+        <span>{{ value.length }}</span>
+        /{{ maxlength }}
+      </div>
     </div>
   </div>
 </template>

@@ -78,11 +78,11 @@
 
 ### select-group
 
-| 参数       | 说明                       | 类型    | 可选值         | 默认值 |
-| ---------- | -------------------------- | ------- | -------------- | ------ |
-| label      | 标签名                     | string  | —              | —      |
-| isPicker   | 是否包含模拟选择框(picker) | string  | —              | —      |
-| placement  | select所在位置             | string  | before / after | —      |
-| header     | 右边区域内容               | slot    | —              | —      |
-| showHeader | 是否显示右边区域           | boolean | —              | true   |
-| body       | 中间区域内容               | slot    | —              | —      |
+| 参数       | 说明                       | 类型          | 可选值         | 默认值 |
+| ---------- | -------------------------- | ------------- | -------------- | ------ |
+| label      | 标签名                     | string        | —              | —      |
+| body       | 中间区域内容               | string / slot | —              | —      |
+| isPicker   | 是否包含模拟选择框(picker) | string        | —              | —      |
+| placement  | select所在位置             | string        | before / after | —      |
+| header     | 右边区域内容               | slot          | —              | —      |
+| showHeader | 是否显示右边区域           | boolean       | —              | true   |

@@ -7,10 +7,12 @@
           <button
             @click="close('icon')"
             class="weui-icon-btn weui-icon-btn_close weui-picker__btn"
-          >关闭</button>
+          >
+            关闭
+          </button>
         </div>
         <div class="weui-half-screen-dialog__hd__main">
-          <strong class="weui-half-screen-dialog__title">{{title}}</strong>
+          <strong class="weui-half-screen-dialog__title">{{ title }}</strong>
         </div>
       </div>
       <div class="weui-half-screen-dialog__bd">
@@ -30,7 +32,8 @@
           class="weui-btn weui-btn_primary weui-picker__btn"
           data-action="select"
           href="javascript:;"
-        >确定</a>
+          >确定</a
+        >
       </div>
     </div>
   </div>
@@ -87,6 +90,12 @@ export default {
       }
     },
     show: function (config) {
+      if (config.default instanceof Array === false) {
+        console.error('default应为数组')
+        return new Promise((resolve) => {
+          this.resolve = resolve
+        })
+      }
       this.type = 'default'
       this.title = config.title ? config.title : null
       this.maskClosable = config.maskClosable ? config.maskClosable : true
@@ -106,6 +115,13 @@ export default {
       })
     },
     showDate: function (config) {
+      config.default = config.default.split('-')
+      if (config.default.length !== 3) {
+        console.error('default传值错误')
+        return new Promise((resolve) => {
+          this.resolve = resolve
+        })
+      }
       this.type = 'date'
       this.title = config.title ? config.title : null
       const dateAll = this.getAllDateCN(new Date(config.start), new Date(config.end))
@@ -115,21 +131,21 @@ export default {
           this.resolve = resolve
         })
       }
-      const yearIndex = dateAll.findIndex(item => item.value === config.default[0])
+      const yearIndex = dateAll.findIndex(item => item.value == config.default[0])
       if (yearIndex === -1) {
         console.error('默认日期不在日期范围内')
         return new Promise((resolve) => {
           this.resolve = resolve
         })
       }
-      const monthIndex = dateAll[yearIndex].children.findIndex(item => item.value === config.default[1])
+      const monthIndex = dateAll[yearIndex].children.findIndex(item => item.value == config.default[1])
       if (monthIndex === -1) {
         console.error('默认日期不在日期范围内')
         return new Promise((resolve) => {
           this.resolve = resolve
         })
       }
-      const dayIndex = dateAll[yearIndex].children[monthIndex].children.findIndex(item => item.value === config.default[2])
+      const dayIndex = dateAll[yearIndex].children[monthIndex].children.findIndex(item => item.value == config.default[2])
       if (dayIndex === -1) {
         console.error('默认日期不在日期范围内')
         return new Promise((resolve) => {
