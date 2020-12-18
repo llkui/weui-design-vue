@@ -1,6 +1,6 @@
 ## 更新日志
 
-### progress...
+### 0.1.2
 
 #### Bug Fixes
 
@@ -21,7 +21,7 @@
 
 - form-radio: 内嵌插槽提取为label属性
 - form-switch: 内嵌插槽提取为label属性
-- picker: showDate日期控件，默认值由array变更为string[2017, 9, 9]变更为'2017-9-9'
+- picker: showDate日期控件，默认值由array变更为string，例如：[2017, 9, 9]变更为'2017-9-9'
 - gallery: img属性更名为src，show属性更名为visible
 
 ### 0.1.0
