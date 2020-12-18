@@ -1,8 +1,20 @@
 <template>
-  <div @click="$emit('onClick')" class="weui-gallery" style="display: block" v-if="show">
-    <span :style="'background-image: url(' + img + ')'" class="weui-gallery__img"></span>
+  <div
+    @click="$emit('onClick')"
+    class="weui-gallery"
+    style="display: block"
+    v-if="visible"
+  >
+    <span
+      :style="'background-image: url(' + src + ')'"
+      class="weui-gallery__img"
+    ></span>
     <div class="weui-gallery__opr" v-if="canDelete">
-      <a @click.stop="deleteGallery()" class="weui-gallery__del" href="javascript:">
+      <a
+        @click.stop="deleteGallery()"
+        class="weui-gallery__del"
+        href="javascript:"
+      >
         <i class="weui-icon-delete weui-icon_gallery-delete"></i>
       </a>
     </div>
@@ -12,11 +24,11 @@
 export default {
   name: 'WeuiGallery',
   props: {
-    img: {
+    src: {
       type: String,
       default: null,
     },
-    show: {
+    visible: {
       type: Boolean,
       default: false,
     },

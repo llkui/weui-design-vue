@@ -11,7 +11,7 @@
       </template>
     </weui-cell>
   </weui-cell-group>
-  <weui-gallery :show="show" :img="img" :canDelete="true" @onDelete="deleteGallery()" @onClick="hide()"></weui-gallery>
+  <weui-gallery :visible="show" :src="img" :canDelete="true" @onDelete="deleteGallery()" @onClick="hide()"></weui-gallery>
 </template>
 <script>
 import pic from './../assets/pic.png'
@@ -23,6 +23,7 @@ import pic from './../assets/pic.png'
           {
             url: pic,
             status: 'uploading',
+            progress: '50%'
           },
           {
             url: pic,
@@ -87,10 +88,11 @@ import pic from './../assets/pic.png'
 
 ### FileListItem
 
-| 参数   | 说明         | 类型   | 可选值                    | 默认值 |
-| ------ | ------------ | ------ | ------------------------- | ------ |
-| url    | 文件路径     | string | —                         | —      |
-| status | 文件上传状态 | string | uploading / failed / done | —      |
+| 参数     | 说明         | 类型   | 可选值                    | 默认值 |
+| -------- | ------------ | ------ | ------------------------- | ------ |
+| url      | 文件路径     | string | —                         | —      |
+| status   | 文件上传状态 | string | uploading / failed / done | —      |
+| progress | 文件上传进度 | string | —                         | —      |
 
 
 ## Event

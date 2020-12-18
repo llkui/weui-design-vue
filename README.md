@@ -46,6 +46,10 @@ $ npm install
 $ npm run serve
 ```
 
+## Mobile example
+
+![https://llkui.github.io/weui-design-vue-example](./examples/assets/qrcode.png)
+
 ## LICENSE
 
 MIT

@@ -2,33 +2,43 @@
   <div class="weui-uploader">
     <div class="weui-uploader__hd" v-if="showCount || title">
       <p class="weui-uploader__title">{{ title }}</p>
-      <div class="weui-uploader__info" v-if="showCount">{{ value.length }}/{{ maxCount }}</div>
+      <div class="weui-uploader__info" v-if="showCount">
+        {{ value.length }}/{{ maxCount }}
+      </div>
     </div>
     <div class="weui-uploader__bd">
       <ul class="weui-uploader__files">
         <template v-for="(file, index) in value">
           <li
             :class="
-                    file.status === 'failed' || file.status === 'uploading'
-                      ? 'weui-uploader__file weui-uploader__file_status'
-                      : 'weui-uploader__file'
-                  "
+              file.status === 'failed' || file.status === 'uploading'
+                ? 'weui-uploader__file weui-uploader__file_status'
+                : 'weui-uploader__file'
+            "
             :key="index"
             :style="'background-image: url(' + file.url + ')'"
             @click="preview(file)"
           >
-            <div class="weui-uploader__file-content" v-if="file.status === 'failed'">
+            <div
+              class="weui-uploader__file-content"
+              v-if="file.status === 'failed'"
+            >
               <i class="weui-icon-warn"></i>
             </div>
             <div
               class="weui-uploader__file-content"
-              style="font-size: 12px"
               v-else-if="file.status === 'uploading'"
-            >上传中...</div>
+            >
+              <span v-if="file.progress">{{ file.progress }}</span>
+              <span v-else style="font-size: 12px">上传中...</span>
+            </div>
           </li>
         </template>
       </ul>
-      <div class="weui-uploader__input-box" v-if="showButton && value.length < maxCount">
+      <div
+        class="weui-uploader__input-box"
+        v-if="showButton && value.length < maxCount"
+      >
         <div class="weui-uploader__input-box">
           <input
             :accept="accept"

@@ -4,6 +4,8 @@
 
 #### Bug Fixes
 
+- cell-group-title: 修复title属性不生效
+
 #### Features
 
 - form-tip: 增加tipContent属性
@@ -12,6 +14,7 @@
 - form-radio: more回调事件更名为onMore
 - form-text: 样式优化
 - select-group: body支持string
+- uploader: FileListItem添加progress属性
 - 新增 `form-control` 组件
 
 #### Breaking Changes
@@ -19,6 +22,7 @@
 - form-radio: 内嵌插槽提取为label属性
 - form-switch: 内嵌插槽提取为label属性
 - picker: showDate日期控件，默认值由array变更为string[2017, 9, 9]变更为'2017-9-9'
+- gallery: img属性更名为src，show属性更名为visible
 
 ### 0.1.0
 
