@@ -73,6 +73,10 @@ import {
 } from './form'
 import WeuiPicker from './picker'
 import WeuiUploader from './uploader'
+import {
+  WeuiTab,
+  WeuiTabPanel
+} from './tab'
 
 import './weui.css'
 
@@ -136,6 +140,8 @@ const components = [
   WeuiTextarea,
   WeuiSwitch,
   WeuiUploader,
+  WeuiTab,
+  WeuiTabPanel
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {
