@@ -1,6 +1,16 @@
 ## 更新日志
 
+### progress...
+
+#### Bug Fixes
+
+- picker: 修复滚动异常
+- form-tip: 修复tipContent属性异常
+- form-switch: 修复点击事件绑定错误
+
 ### 0.1.2
+
+`2020-12-18`
 
 #### Bug Fixes
 

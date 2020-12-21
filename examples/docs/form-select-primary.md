@@ -23,7 +23,7 @@
     data() {
       return {
         date: '日期',
-        area: { label: '+86', value: '2'},
+        area: { label: '+86', value: '1'},
         mobile: '12345678907',
         type: { label: '飞机票', value: '1'},
       }

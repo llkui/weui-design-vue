@@ -13,6 +13,11 @@
         </weui-checkbox-group>
       </weui-form-group>
     </weui-form-control>
+    <weui-form-tip>
+      <template #tipContent>
+        点击下一步即表示<a href="javascript:">同意用户协议</a>
+      </template>
+    </weui-form-tip>
   </weui-form>
 </template>
 <script>

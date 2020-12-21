@@ -9,7 +9,9 @@
           :key="indexOptions"
           class="weui-picker__item"
           ref="pickerItem"
-        >{{item.label}}</div>
+        >
+          {{ item.label }}
+        </div>
       </template>
     </div>
   </div>
@@ -55,11 +57,10 @@ export default {
   },
   methods: {
     initData: function () {
-      // if (this.$refs.pickerItem.length > 0) {
-      //   // 获取item的高度
-      //   this.itemH = this.$refs.pickerItem[0].offsetHeight
-      // }
-      this.itemH = 48
+      if (this.$refs.pickerItem.length > 0) {
+        // 获取item的高度
+        this.itemH = this.$refs.pickerItem[0].offsetHeight
+      }
     },
     initPicker: function (index) {
       if (this.$refs.pickerItem.length > 0) {
@@ -74,18 +75,21 @@ export default {
       this.$refs.pickerBd.addEventListener('touchend', this.touchendListener)
     },
     touchstartListener: function (e) {
+      e.preventDefault()
       // 关闭动画
       this.$refs.pickerContent.style.transition = 'all 0s ease 0s'
       this.startY = e.changedTouches[0].clientY
     },
     touchmoveListener: function (e) {
+      e.preventDefault()
       const offset = e.changedTouches[0].clientY - this.startY
       const dist = offset + this.curDist
       this.$refs.pickerContent.style.transform = `translate3d(0px, ${dist}px, 0px)`
       this.offset = offset
       this.dist = dist
     },
-    touchendListener: function () {
+    touchendListener: function (e) {
+      e.preventDefault()
       // 打开动画
       this.$refs.pickerContent.style.transition = 'all 0.3s ease 0s'
       // 记录滑动方向（此方向为item滚动方向，与手指实际滑动方向相反）
