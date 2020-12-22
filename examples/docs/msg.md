@@ -9,7 +9,7 @@
     <a href="javascript:">文字链接</a>
   </template>
   <template slot="btn">
-    <weui-button>推荐操作</button>
+    <weui-button>推荐操作</weui-button>
   </template>
   <template slot="tips">
     提示详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现
@@ -43,7 +43,7 @@
     <a href="javascript:">文字链接</a>
   </template>
   <template slot="btn">
-    <weui-button type="default">辅助操作</button>
+    <weui-button type="default">辅助操作</weui-button>
   </template>
   <template slot="extra">
     <weui-footer>
@@ -69,7 +69,7 @@
     <a href="javascript:">文字链接</a>
   </template>
   <template slot="btn">
-    <weui-button>推荐操作</button>
+    <weui-button>推荐操作</weui-button>
   </template>
 </weui-msg>
 ```
@@ -94,7 +94,7 @@
     <a href="javascript:">文字链接</a>
   </template>
   <template slot="btn">
-    <weui-button>推荐操作</button>
+    <weui-button>推荐操作</weui-button>
   </template>
 </weui-msg>
 ```
