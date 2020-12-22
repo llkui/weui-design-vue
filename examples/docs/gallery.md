@@ -15,10 +15,10 @@
       }
     },
     methods: {
-      hide() {
+      hide: function() {
         this.show = false;
       },
-      deleteGallery() {
+      deleteGallery: function() {
         console.log('删除成功')
       }
     }

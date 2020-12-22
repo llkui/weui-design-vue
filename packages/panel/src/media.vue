@@ -4,8 +4,8 @@
     class="weui-media-box"
   >
     <template v-if="!cell">
-      <div class="weui-media-box__hd" v-if="img">
-        <img :src="img" alt class="weui-media-box__thumb" />
+      <div class="weui-media-box__hd" v-if="icon">
+        <img :src="icon" alt class="weui-media-box__thumb" />
       </div>
       <div class="weui-media-box__bd">
         <h4 class="weui-media-box__title">{{title}}</h4>
@@ -22,7 +22,7 @@
 export default {
   name: 'WeuiMedia',
   props: {
-    img: {
+    icon: {
       type: String,
       default: null
     },

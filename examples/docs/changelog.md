@@ -8,6 +8,11 @@
 - form-tip: 修复tipContent属性异常
 - form-switch: 修复点击事件绑定错误
 
+#### Breaking Changes
+
+- panel: img属性更名为icon
+- preview: onClick回调事件更名为click
+
 ### 0.1.2
 
 `2020-12-18`
