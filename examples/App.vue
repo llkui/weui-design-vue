@@ -5,8 +5,14 @@
       <div class="sidebar">
         <menuCom :data="navsData"></menuCom>
       </div>
-      <div class="view page-container">
+      <div class="page-container">
         <router-view></router-view>
+        <div class="footer">
+          <a target="_blank" href="https://github.com/llkui/weui-design-vue"
+            >weui-design-vue</a
+          >
+          2020 Implement By llkui
+        </div>
       </div>
     </div>
   </div>
@@ -36,12 +42,8 @@ body {
   height: 60px;
 }
 .footer {
-  position: absolute;
-  height: 60px;
-  width: 100%;
-}
-.footer {
-  bottom: 0;
+  padding: 20px;
+  text-align: center;
 }
 .main {
   position: absolute;
@@ -50,15 +52,13 @@ body {
   width: 100%;
   overflow: hidden;
 }
-.sidebar,
-.view {
+.sidebar {
   overflow: auto;
 }
 .sidebar {
   float: left;
   height: 100%;
-  width: 200px;
-  padding: 10px 0 10px 0;
+  width: 220px;
   border-right: #000000 3px solid;
   background-color: #17171d;
 }
@@ -67,10 +67,16 @@ body {
     display: none;
   }
 }
-.view {
+.page-container {
   float: left;
   height: 100%;
-  width: calc(100% - 203px);
+  width: calc(100% - 223px);
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  section {
+    flex: 1;
+  }
 }
 </style>

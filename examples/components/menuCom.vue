@@ -12,13 +12,23 @@
                 v-for="(navItem, key) in group.list"
                 v-show="!navItem.disabled"
               >
-                <router-link :to="navItem.path" active-class="active" exact v-text="navItem.title"></router-link>
+                <router-link
+                  :to="navItem.path"
+                  active-class="active"
+                  exact
+                  v-text="navItem.title"
+                ></router-link>
               </li>
             </ul>
           </div>
         </template>
         <template v-else>
-          <router-link :to="item.path" active-class="active" exact v-text="item.title"></router-link>
+          <router-link
+            :to="item.path"
+            active-class="active"
+            exact
+            v-text="item.title"
+          ></router-link>
         </template>
       </li>
     </ul>
@@ -41,10 +51,21 @@ export default {
 </script>
 
 <style lang="scss">
+.sidebar {
+  // 火狐隐藏侧边栏滚动条
+  scrollbar-width: none;
+
+  // 隐藏侧边栏滚动条
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .side-nav {
   width: 100%;
   box-sizing: border-box;
   transition: opacity 0.3s;
+
   &.is-fade {
     transition: opacity 3s;
   }
@@ -56,38 +77,34 @@ export default {
     margin: 0;
     overflow: hidden;
   }
-  > ul > .nav-item > a {
-    margin-top: 15px;
-  }
-  > ul > .nav-item:nth-child(-n + 4) > a {
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
   .nav-item {
     a {
-      font-size: 20px;
-      color: #333;
-      padding-left: 20px;
+      font-size: 16px;
+      color: #a9a9a9;
+      padding: 10px;
+      margin-left: 10px;
       text-decoration: none;
       display: block;
       position: relative;
       transition: 0.15s ease-out;
       font-weight: bold;
+      border-left: #17171d 2px solid;
+      &:hover {
+        color: #07c160;
+      }
       &.active {
         color: #07c160;
-        border-bottom: #000000 2px solid;
-        border-radius: 4px;
+        border-left: #07c160 2px solid;
       }
     }
     .nav-item {
       a {
         display: block;
-        height: 30px;
-        margin: 0;
-        padding-top: 10px;
-        color: #444;
+        padding: 10px;
+        margin: 0 10px;
+        color: #a9a9a9;
         line-height: 40px;
-        font-size: 20px;
+        font-size: 16px;
         overflow: hidden;
         font: 18px/1 Tahoma, Helvetica, Arial, '\5b8b\4f53', sans-serif;
         white-space: nowrap;
@@ -127,10 +144,12 @@ export default {
   }
   .nav-group__title {
     font-size: 16px;
-    color: rgb(153, 153, 153);
+    color: #717171;
     line-height: 26px;
-    padding-left: 20px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    border-left: #17171d 2px solid;
+    font-weight: bold;
   }
   #code-sponsor-widget {
     margin: 0 0 0 -20px;

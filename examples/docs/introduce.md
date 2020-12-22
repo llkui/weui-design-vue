@@ -1,4 +1,4 @@
-## Weui Design of Vue
+## Weui Design of Vue <iframe src="https://ghbtns.com/github-btn.html?user=llkui&repo=weui-design-vue&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub" allowTransparency="true"></iframe>
 
 `weui-design-vue` 是遵循 Weui Design 设计规范的 Vue UI 组件库，主要用于无线业务。
 
