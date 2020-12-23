@@ -7,6 +7,7 @@
 - picker: 修复滚动异常
 - form-tip: 修复tipContent属性异常
 - form-switch: 修复点击事件绑定错误
+- msg: 修复type为null时显示异常，修复tips和extra不存在时显示异常
 
 #### Breaking Changes
 

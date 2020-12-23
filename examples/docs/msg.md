@@ -63,7 +63,7 @@
 :::demo
 
 ```html
-<weui-msg type="null" title="操作成功">
+<weui-msg :type="null" title="操作成功">
   <template slot="desc">
     内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现
     <a href="javascript:">文字链接</a>
@@ -81,7 +81,7 @@
 :::demo
 
 ```html
-<weui-msg type="null">
+<weui-msg :type="null">
   <template slot="desc">
     内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现
     <a href="javascript:">文字链接</a>

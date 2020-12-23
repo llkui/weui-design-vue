@@ -1,6 +1,6 @@
 <template>
   <div class="weui-msg">
-    <div class="weui-msg__icon-area">
+    <div class="weui-msg__icon-area" v-if="type">
       <i class="weui-icon-success weui-icon_msg" v-if="type == 'success'"></i>
       <i class="weui-icon-warn weui-icon_msg" v-else-if="type == 'warn'"></i>
     </div>
@@ -20,13 +20,13 @@
         <slot name="btn"></slot>
       </p>
     </div>
-    <div class="weui-msg__tips-area">
+    <div class="weui-msg__tips-area" v-if="$slots.tips || tips">
       <p class="weui-msg__tips">
         <template v-if="tips">{{ tips }}</template>
         <slot name="tips" v-if="!tips"></slot>
       </p>
     </div>
-    <div class="weui-msg__extra-area">
+    <div class="weui-msg__extra-area" v-if="$slots.extra">
       <slot name="extra"></slot>
     </div>
   </div>
