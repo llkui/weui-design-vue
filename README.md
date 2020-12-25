@@ -50,6 +50,8 @@ $ npm run serve
 
 ![https://llkui.github.io/weui-design-vue-example](https://raw.githubusercontent.com/llkui/weui-design-vue/master/examples/assets/qrcode.png)
 
+[https://llkui.github.io/weui-design-vue-example](https://llkui.github.io/weui-design-vue-example)
+
 ## LICENSE
 
 MIT
