@@ -1,6 +1,6 @@
 <template>
   <div class="weui-picker__group" ref="pickerBd">
-    <div class="weui-picker__mask"></div>
+    <div class="weui-picker__mask" @click="clickItem($event)"></div>
     <div class="weui-picker__indicator" ref="pickerIndicator"></div>
     <div class="weui-picker__content" ref="pickerContent">
       <template v-for="(item, indexOptions) in group">
@@ -75,7 +75,6 @@ export default {
       this.$refs.pickerBd.addEventListener('touchend', this.touchendListener)
     },
     touchstartListener: function (e) {
-      e.preventDefault()
       // 关闭动画
       this.$refs.pickerContent.style.transition = 'all 0s ease 0s'
       this.startY = e.changedTouches[0].clientY
@@ -88,8 +87,7 @@ export default {
       this.offset = offset
       this.dist = dist
     },
-    touchendListener: function (e) {
-      e.preventDefault()
+    touchendListener: function () {
       // 打开动画
       this.$refs.pickerContent.style.transition = 'all 0.3s ease 0s'
       // 记录滑动方向（此方向为item滚动方向，与手指实际滑动方向相反）
@@ -113,6 +111,9 @@ export default {
         this.curSelectedIndex -= offsetInteger
       }
 
+      this.moveToSelected()
+    },
+    moveToSelected: function () {
       // 判断选中item是否为item
       this.dist = this.selectedIsDisabled()
 
@@ -145,6 +146,30 @@ export default {
           this.$parent.selectedIndex[this.index + 1] = 0
         }
         this.$parent.groups.splice(this.index + 1, 1, newGroup)
+      }
+    },
+    clickItem: function (e) {
+      const offsetY = e.offsetY
+      let offsetInteger = 0;
+      if (offsetY <= 47) {
+        offsetInteger = 2
+      } else if (offsetY <= 92) {
+        offsetInteger = 1
+      } else if (offsetY <= 193) {
+        offsetInteger = -1
+      } else {
+        offsetInteger = -2
+      }
+
+      if (this.curSelectedIndex - offsetInteger < 0 || this.curSelectedIndex - offsetInteger > this.group.length - 1) {
+        // 超过group长度
+        return
+      } else {
+        this.direction = offsetY < 0 ? 1 : -1
+        this.dist = this.curDist + this.itemH * offsetInteger
+        this.curSelectedIndex -= offsetInteger
+
+        this.moveToSelected()
       }
     }
   }

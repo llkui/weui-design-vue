@@ -5,6 +5,7 @@
 #### Features
 
 - tabbar: 添加count和dot属性
+- picker: 支持点击选中
 
 #### Breaking changes
 
