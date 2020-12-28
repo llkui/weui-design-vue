@@ -81,6 +81,9 @@ textarea {
 
 #app {
   .page-container>section {
+    width: 60%;
+    margin: auto;
+
     &>h2 {
       font-size: 28px;
       margin: 0;
@@ -94,8 +97,6 @@ textarea {
     &>h3,
     &>h4,
     &>h5 {
-      width: 60%;
-      margin: auto;
       margin-top: 10px;
       font-weight: normal;
 
@@ -109,9 +110,7 @@ textarea {
     }
 
     &>p {
-      width: 60%;
-      margin: auto;
-      padding: 10px;
+      padding: 10px 0;
       font-size: 16px;
       line-height: 30px;
 
@@ -120,14 +119,12 @@ textarea {
       }
     }
 
-    &>ul,
-    &>pre,
-    &>blockquote {
-      width: 60%;
-      margin: auto;
+    &>ul {
+      padding-left: 1.2em;
     }
 
     &>blockquote {
+      margin: 10px 0;
       color: #666;
       border-left: 4px solid #ddd;
       padding-left: 20px;
@@ -158,8 +155,6 @@ textarea {
   }
 
   .tip {
-    width: 60%;
-    margin: auto;
     margin-top: 10px;
     padding: 8px 16px;
     background-color: #ecf8ff;
@@ -173,8 +168,6 @@ textarea {
   }
 
   .warning {
-    width: 60%;
-    margin: auto;
     margin-top: 10px;
     padding: 8px 16px;
     background-color: #fff6f7;
@@ -192,9 +185,8 @@ textarea {
   }
 
   table {
+    width: 100%;
     border-collapse: collapse;
-    width: 60%;
-    margin: auto;
     padding: 8px 16px;
     background-color: #fff;
     font-size: 14px;

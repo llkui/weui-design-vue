@@ -1,5 +1,15 @@
 ## 更新日志
 
+### progress...
+
+#### Features
+
+- tabbar: 添加count和dot属性
+
+#### Breaking changes
+
+- dialog: 移除content属性，采用内嵌实现
+
 ### 0.1.3
 
 `2020-12-25`

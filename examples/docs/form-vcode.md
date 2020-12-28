@@ -59,8 +59,8 @@
 
 | 参数  | 说明 | 类型   | 可选值 | 默认值 |
 | ----- | ---- | ------ | ------ | ------ |
-| title | 标题 | string | -      | -      |
-| desc  | 描述 | string | -      | -      |
+| title | 标题 | string | —      | —      |
+| desc  | 描述 | string | —      | —      |
 
 ### form-group
 
@@ -86,5 +86,5 @@
 
 | 参数           | 说明     | 类型    | 可选值 | 默认值 |
 | -------------- | -------- | ------- | ------ | ------ |
-| value(v-model) | 是否选择 | boolean | -      | false  |
-| animate(sync)  | 提醒动画 | boolean | -      | false  |
+| value(v-model) | 是否选择 | boolean | —      | false  |
+| animate(sync)  | 提醒动画 | boolean | —      | false  |

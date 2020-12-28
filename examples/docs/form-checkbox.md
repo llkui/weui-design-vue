@@ -44,9 +44,9 @@ export default {
 
 | 参数           | 说明         | 类型    | 可选值 | 默认值 |
 | -------------- | ------------ | ------- | ------ | ------ |
-| name           | 标识符       | string  | -      | -      |
-| value(v-model) | 当前选中的值 | array   | -      | -      |
-| showMore       | 是否显示更多 | boolean | -      | false  |
+| name           | 标识符       | string  | —      | —      |
+| value(v-model) | 当前选中的值 | array   | —      | —      |
+| showMore       | 是否显示更多 | boolean | —      | false  |
 
 | 事件名称 | 说明         | 回调参数   |
 | -------- | ------------ | ---------- |
@@ -56,5 +56,5 @@ export default {
 
 | 参数  | 说明     | 类型   | 可选值 | 默认值 |
 | ----- | -------- | ------ | ------ | ------ |
-| value | 选项的值 | string | -      | -      |
-| label | 选项名   | string | -      | -      |
+| value | 选项的值 | string | —      | —      |
+| label | 选项名   | string | —      | —      |

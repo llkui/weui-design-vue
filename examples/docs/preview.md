@@ -32,16 +32,16 @@
 
 | 参数   | 说明         | 类型   | 可选值 | 默认值 |
 | ------ | ------------ | ------ | ------ | ------ |
-| label  | 标签         | string | -      | -      |
-| value  | 内容         | string | -      | -      |
-| footer | 底部操作区域 | slot   | -      | -      |
+| label  | 标签         | string | —      | —      |
+| value  | 内容         | string | —      | —      |
+| footer | 底部操作区域 | slot   | —      | —      |
 
 ### preview-item
 
 | 参数  | 说明 | 类型   | 可选值 | 默认值 |
 | ----- | ---- | ------ | ------ | ------ |
-| label | 标签 | string | -      | -      |
-| value | 内容 | string | -      | -      |
+| label | 标签 | string | —      | —      |
+| value | 内容 | string | —      | —      |
 
 ### preview-button
 

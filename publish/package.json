@@ -8,10 +8,12 @@
   "main": "lib/weui-design-vue.umd.min.js",
   "author": "llkui",
   "keywords": [
-    "component",
     "vue",
-    "mobile",
-    "weui"
+    "vue ui",
+    "weui",
+    "mobile ui",
+    "component",
+    "components"
   ],
   "license": "MIT",
   "browserslist": [

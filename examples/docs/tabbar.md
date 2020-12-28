@@ -5,9 +5,9 @@
 ```html
 <template>
   <weui-tabbar :selectedIndex.sync="selectedIndex">
-    <weui-tabbar-item :icon="tabbar" label="微信"></weui-tabbar-item>
+    <weui-tabbar-item :icon="tabbar" label="微信" :count="8"></weui-tabbar-item>
     <weui-tabbar-item :icon="tabbar" label="通讯录"></weui-tabbar-item>
-    <weui-tabbar-item :icon="tabbar" label="发现"></weui-tabbar-item>
+    <weui-tabbar-item :icon="tabbar" label="发现" dot></weui-tabbar-item>
     <weui-tabbar-item :icon="tabbar" label="我"></weui-tabbar-item>
   </weui-tabbar>
 </template>
@@ -36,7 +36,9 @@
 
 ### tabbar-item
 
-| 参数  | 说明         | 类型   | 可选值 | 默认值 |
-| ----- | ------------ | ------ | ------ | ------ |
-| icon  | 图标         | string | —      | —      |
-| label | 标签显示文本 | string | —      | —      |
+| 参数  | 说明           | 类型    | 可选值 | 默认值 |
+| ----- | -------------- | ------- | ------ | ------ |
+| icon  | 图标           | string  | —      | —      |
+| label | 标签显示文本   | string  | —      | —      |
+| count | 展示的数字     | number  | —      | —      |
+| label | 是否展示小红点 | boolean | —      | false  |

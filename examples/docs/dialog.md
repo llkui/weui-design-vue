@@ -8,7 +8,9 @@
   <weui-button @click="showDialog('ios2')">iOS Dialog样式二</weui-button>
   <weui-button @click="showDialog('android1')">Android Dialog样式一</weui-button>
   <weui-button @click="showDialog('android2')">Android Dialog样式二</weui-button>
-  <weui-dialog :visible="isVisible" :type="type" :title="title" :content="content" :cancelText="cancelText" :okText="okText" :showCancel="showCancel" @onCancel="handleCancel($event)" @onOk="handleOk($event)"></weui-dialog>
+  <weui-dialog :visible="isVisible" :type="type" :title="title" :cancelText="cancelText" :okText="okText" :showCancel="showCancel" @onCancel="handleCancel($event)" @onOk="handleOk($event)">
+    <p>{{content}}</p>
+  </weui-dialog>
 </template>
 <script>
   export default {
@@ -73,15 +75,14 @@
 
 ## Attributes
 
-| 参数       | 说明             | 类型          | 可选值 | 默认值 |
-| ---------- | ---------------- | ------------- | ------ | ------ |
-| visible    | 是否显示弹窗     | boolean       | —      | false  |
-| title      | 标题             | string        | —      | —      |
-| content    | 弹窗内容         | string / html | —      | —      |
-| cancelText | 取消按钮文本     | string        | —      | 取消   |
-| okText     | 确定按钮文本     | string        | —      | 确定   |
-| showCancel | 是否显示取消按钮 | boolean       | —      | true   |
-| showOk     | 是否显示确定按钮 | boolean       | —      | true   |
+| 参数       | 说明             | 类型    | 可选值 | 默认值 |
+| ---------- | ---------------- | ------- | ------ | ------ |
+| visible    | 是否显示弹窗     | boolean | —      | false  |
+| title      | 标题             | string  | —      | —      |
+| cancelText | 取消按钮文本     | string  | —      | 取消   |
+| okText     | 确定按钮文本     | string  | —      | 确定   |
+| showCancel | 是否显示取消按钮 | boolean | —      | true   |
+| showOk     | 是否显示确定按钮 | boolean | —      | true   |
 
 ## Event
 

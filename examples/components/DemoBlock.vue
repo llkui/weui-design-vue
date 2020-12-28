@@ -81,9 +81,7 @@ export default {
 </script>
 <style lang="scss">
 .demo-block {
-  width: 60%;
   padding: 8px 16px;
-  margin: auto;
   margin-top: 10px;
   border-left: solid 5px#17171d;
   background-color: #ededed;

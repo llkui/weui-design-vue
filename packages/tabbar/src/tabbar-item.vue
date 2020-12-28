@@ -6,6 +6,18 @@
   >
     <div style="display: inline-block; position: relative">
       <img :src="icon" alt="" class="weui-tabbar__icon" />
+      <span
+        v-if="count"
+        class="weui-badge"
+        style="position: absolute; top: -2px; right: -13px"
+      >
+        {{ count }}
+      </span>
+      <span
+        v-if="dot"
+        class="weui-badge weui-badge_dot"
+        style="position: absolute; top: 0; right: -6px"
+      ></span>
     </div>
     <p class="weui-tabbar__label">{{ label }}</p>
   </div>
@@ -13,7 +25,7 @@
 <script>
 export default {
   name: 'WeuiTabbarItem',
-  data() {
+  data () {
     return {
       selected: false,
       key: null,
@@ -28,6 +40,14 @@ export default {
       type: String,
       default: null,
     },
+    count: {
+      type: Number,
+      default: null
+    },
+    dot: {
+      type: Boolean,
+      default: false
+    }
   },
   methods: {
     select: function () {
