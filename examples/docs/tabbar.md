@@ -41,4 +41,4 @@
 | icon  | 图标           | string  | —      | —      |
 | label | 标签显示文本   | string  | —      | —      |
 | count | 展示的数字     | number  | —      | —      |
-| label | 是否展示小红点 | boolean | —      | false  |
+| dot   | 是否展示小红点 | boolean | —      | false  |
