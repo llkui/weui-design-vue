@@ -87,7 +87,7 @@
 
 ## Api
 
-### picker(config)
+### $picker.show(config)
 
 | 参数         | 说明                 | 类型                  | 可选值    | 默认值 |
 | ------------ | -------------------- | --------------------- | --------- | ------ |
@@ -107,3 +107,12 @@
 | value    | 内容           | string  | —      | —      |
 | disabled | 是否禁止选择   | boolean | —      | false  |
 | children | 下一层选择内容 | array   | —      | —      |
+
+### $picker.showDate(config)
+
+| 参数    | 说明            | 类型                | 可选值 | 默认值 |
+| ------- | --------------- | ------------------- | ------ | ------ |
+| title   | 标题            | string              | —      | —      |
+| start   | 可选日期 (开始) | string `yyyy-MM-dd` | —      | —      |
+| end     | 可选日期 (结束) | string `yyyy-MM-dd` | —      | —      |
+| default | 默认日期        | string `yyyy-MM-dd` | —      | —      |
