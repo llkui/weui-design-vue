@@ -1,11 +1,13 @@
 {
   "name": "weui-design-vue",
-  "version": "1.0.0",
+  "version": "2.0.0-beta.0",
   "private": false,
   "description": "A Mobile UI components based on Weui Design and Vue",
   "homepage": "https://llkui.github.io/weui-design-vue",
   "repository": "https://github.com/llkui/weui-design-vue",
   "main": "lib/weui-design-vue.umd.min.js",
+  "style": "lib/weui-design-vue.css",
+  "typings": "types/index.d.ts",
   "author": "llkui",
   "keywords": [
     "vue",
@@ -20,7 +22,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name weui-design-vue --dest publish/lib packages/index.js"
+    "lib": "vue-cli-service build --target lib --name weui-design-vue --dest publish/lib packages/index.js && gulp"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -37,6 +39,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "gulp": "^4.0.2",
+    "gulp-rimraf": "^1.0.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
     "vue-markdown-loader": "^2.4.1",

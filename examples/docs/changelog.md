@@ -1,5 +1,11 @@
 ## 更新日志
 
+### progress...
+
+#### Features
+
+- 支持 TypeScript
+
 ### 1.0.0
 
 `2020-12-31`

@@ -31,8 +31,8 @@
 
 | 参数      | 说明             | 类型    | 可选值 | 默认值 |
 | --------- | ---------------- | ------- | ------ | ------ |
-| img       | 图片地址         | string  | —      | —      |
-| show      | 显示/隐藏        | boolean | —      | false  |
+| src       | 图片地址         | string  | —      | —      |
+| visible   | 显示/隐藏        | boolean | —      | false  |
 | canDelete | 是否显示删除按钮 | boolean | —      | false  |
 
 ## Event

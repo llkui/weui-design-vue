@@ -1,5 +1,7 @@
-## Features
 A Mobile UI components based on `Weui Design` and `Vue`
+
+## Features
+- Support TS
 
 ## Install
 

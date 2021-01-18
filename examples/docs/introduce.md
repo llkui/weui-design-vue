@@ -9,7 +9,7 @@
 ### 特性
 
 - 开箱即用的高质量 Vue 无线端组件
-- 暂不支持 TypeScript 构建
+- 支持 TypeScript
 
 ### 支持环境
 
