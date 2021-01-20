@@ -10,3 +10,5 @@ export {
   WeuiGrid,
   WeuiGridItem
 }
+
+export default WeuiGrid

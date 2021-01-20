@@ -27,3 +27,4 @@ pnpm-debug.log*
 # publish
 publish/lib
 publish/types/
+publish/README.md

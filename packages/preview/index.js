@@ -13,3 +13,5 @@ export {
   WeuiPreviewItem,
   WeuiPreviewButton
 }
+
+export default WeuiPreview

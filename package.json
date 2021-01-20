@@ -22,7 +22,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name weui-design-vue --dest publish/lib packages/index.js && gulp"
+    "lib": "vue-cli-service build --target lib --name weui-design-vue --dest publish/lib packages/index.js && gulp",
+    "lib:all": "npm run lib && node ./build/lib-cli.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",

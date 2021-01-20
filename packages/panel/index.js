@@ -16,3 +16,5 @@ export {
   WeuiMediaInfo,
   WeuiMediaInfoMeta
 }
+
+export default WeuiPanel

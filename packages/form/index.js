@@ -56,3 +56,5 @@ export {
   WeuiTextarea,
   WeuiSwitch,
 }
+
+export default WeuiForm

@@ -10,3 +10,5 @@ export {
   WeuiTabbar,
   WeuiTabbarItem
 }
+
+export default WeuiTabbar

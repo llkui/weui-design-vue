@@ -13,3 +13,5 @@ export {
   WeuiCellGroup,
   WeuiCell
 }
+
+export default WeuiCellGroup

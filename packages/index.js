@@ -120,7 +120,6 @@ const components = [
   WeuiHalfScreenDialog,
   WeuiSlider,
   WeuiProgress,
-  WeuiTextarea,
   WeuiPicker,
   WeuiForm,
   WeuiFormControl,

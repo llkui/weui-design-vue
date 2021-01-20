@@ -11,3 +11,5 @@ export {
   WeuiTab,
   WeuiTabPanel
 }
+
+export default WeuiTab

@@ -16,3 +16,5 @@ export {
   WeuiFooterLinks,
   WeuiFooterLink
 }
+
+export default WeuiFooter

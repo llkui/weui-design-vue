@@ -10,3 +10,5 @@ export {
   WeuiFlex,
   WeuiFlexItem
 }
+
+export default WeuiFlex

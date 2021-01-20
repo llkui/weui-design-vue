@@ -10,3 +10,5 @@ export {
   WeuiNavbar,
   WeuiNavbarItem
 }
+
+export default WeuiNavbar
