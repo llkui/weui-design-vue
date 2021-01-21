@@ -7,7 +7,7 @@
   <weui-form :title="'验证码'" :desc="'验证手机号样式'" >
     <weui-form-control>
       <weui-form-group :tips="'收不到验证码'">
-        <weui-input placeholder="请输入手机号" label="手机号" type="number" pattern="[0-9]*" right-slot :maxlength="11">
+        <weui-input v-model="mobile" placeholder="请输入手机号" label="手机号" type="number" pattern="[0-9]*" right-slot :maxlength="11">
           <weui-button :type="'text'">
             <weui-icon :type="'info-circle'" :mini="true"></weui-icon>
           </weui-button>
@@ -34,6 +34,7 @@
   export default {
     data() {
       return {
+        mobile: '',
         code: '',
         agree: false,
         agreeAnimate: false

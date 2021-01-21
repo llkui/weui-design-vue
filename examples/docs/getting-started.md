@@ -38,7 +38,7 @@ $ npm install --save weui-design-vue
 
 在 `src/main.js` 文件中引入组件和样式，文件中带有+++为引入配置
 
-```bash
+```js
 import Vue from 'vue'
 import WeuiVue from 'weui-design-vue' +++
 import 'weui-design-vue/lib/weui-design-vue.css' +++

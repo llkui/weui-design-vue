@@ -5,6 +5,9 @@
   "path": "/getting-started",
   "title": "快速上手"
 }, {
+  "path": "/customize-theme",
+  "title": "定制主题"
+}, {
   "path": "/changelog",
   "title": "更新日志"
 }, {

@@ -65,6 +65,7 @@ export default {
   width: 100%;
   box-sizing: border-box;
   transition: opacity 0.3s;
+  padding: 1.5rem 0;
 
   &.is-fade {
     transition: opacity 3s;
@@ -80,39 +81,39 @@ export default {
   .nav-item {
     a {
       font-size: 16px;
-      color: #a9a9a9;
+      color: #2c3e50;
       padding: 10px;
-      margin-left: 10px;
+      margin-left: 20px;
       text-decoration: none;
       display: block;
       position: relative;
       transition: 0.15s ease-out;
       font-weight: bold;
-      border-left: #17171d 2px solid;
+      border-left: #ffffff 2px solid;
       &:hover {
-        color: #07c160;
+        color: var(--weui-BRAND);
       }
       &.active {
-        color: #07c160;
-        border-left: #07c160 2px solid;
+        color: var(--weui-BRAND);
+        border-left: var(--weui-BRAND) 2px solid;
       }
     }
     .nav-item {
       a {
         display: block;
         padding: 10px;
-        margin: 0 10px;
-        color: #a9a9a9;
+        margin: 0 20px;
+        color: #2c3e50;
         line-height: 40px;
         font-size: 16px;
         overflow: hidden;
-        font: 18px/1 Tahoma, Helvetica, Arial, '\5b8b\4f53', sans-serif;
+        font: 16px/1 Tahoma, Helvetica, Arial, '\5b8b\4f53', sans-serif;
         white-space: nowrap;
         text-overflow: ellipsis;
         font-weight: normal;
         &:hover,
         &.active {
-          color: #07c160;
+          color: var(--weui-BRAND);
         }
       }
     }
@@ -147,8 +148,8 @@ export default {
     color: #717171;
     line-height: 26px;
     padding: 10px;
-    margin-left: 10px;
-    border-left: #17171d 2px solid;
+    margin-left: 20px;
+    border-left: #ffffff 2px solid;
     font-weight: bold;
   }
   #code-sponsor-widget {

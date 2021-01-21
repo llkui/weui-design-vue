@@ -150,7 +150,7 @@ export default {
     }
 
     &:hover {
-      color: #07c160;
+      color: var(--weui-BRAND);
       background-color: #f9fafc;
     }
 

@@ -8,7 +8,8 @@ module.exports = {
     index: {
       entry: 'examples/main.js', // 入口
       template: 'public/index.html', // 模板
-      filename: 'index.html' // 输出文件
+      filename: 'index.html', // 输出文件
+      title: 'Weui Design Vue'
     }
   },
   parallel: false,
