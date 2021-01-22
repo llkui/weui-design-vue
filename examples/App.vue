@@ -18,7 +18,7 @@
       <div class="sidebar">
         <menuCom :data="navsData"></menuCom>
       </div>
-      <div class="page-container">
+      <div class="page-container" ref="pageContainer">
         <router-view></router-view>
         <div class="footer">
           <a target="_blank" href="https://github.com/llkui/weui-design-vue"
@@ -54,6 +54,15 @@ export default {
     return {
       navsData,
       publicPath: process.env.BASE_URL
+    }
+  },
+  watch: {
+    $route: function () {
+      const pageContainer = this.$refs.pageContainer
+      pageContainer.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
     }
   },
   mounted: function () {

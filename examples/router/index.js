@@ -15,8 +15,8 @@ const docsRoutefun = navConfig => {
           route.push({
             path: nav.path,
             name: nav.name,
-            component: r =>
-              require.ensure([], () => r(require(`@/docs${nav.path}.md`)))
+            component: () => import(`@/docs${nav.path}.md`)
+            // r => require.ensure([], () => r(require(`@/docs${nav.path}.md`)))
           })
         })
       })
@@ -24,8 +24,8 @@ const docsRoutefun = navConfig => {
       route.push({
         path: item.path,
         name: item.name,
-        component: r =>
-          require.ensure([], () => r(require(`@/docs${item.path}.md`)))
+        component: () => import(`@/docs${item.path}.md`)
+        // r => require.ensure([], () => r(require(`@/docs${item.path}.md`)))
       })
     }
   })
