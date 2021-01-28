@@ -32,7 +32,9 @@ export default {
       curDist: 0,
       // 相对于起始点的实时偏差
       offset: 0,
-      curSelectedIndex: this.selectedIndex
+      curSelectedIndex: this.selectedIndex,
+      // 用于记录是否滑动
+      isMove: false
     }
   },
   props: ['group', 'index', 'selectedIndex'],
@@ -81,6 +83,7 @@ export default {
     },
     touchmoveListener: function (e) {
       e.preventDefault()
+      this.isMove = true
       const offset = e.changedTouches[0].clientY - this.startY
       const dist = offset + this.curDist
       this.$refs.pickerContent.style.transform = `translate3d(0px, ${dist}px, 0px)`
@@ -90,28 +93,34 @@ export default {
     touchendListener: function () {
       // 打开动画
       this.$refs.pickerContent.style.transition = 'all 0.3s ease 0s'
-      // 记录滑动方向（此方向为item滚动方向，与手指实际滑动方向相反）
-      this.direction = this.offset > 0 ? -1 : 1
-      // 计算应该选中的index
-      const offsetInteger = Math.round(this.offset / this.itemH)
       /**
-       * 往上滑动，实际手指向下滑动，所以要用 - 
-       *  */
-      if (this.curSelectedIndex - offsetInteger < 0) {
-        // 旋转刻度重置到0的位置
-        this.dist = this.curDist + this.itemH * (this.curSelectedIndex - 0)
-        this.curSelectedIndex = 0
-      } else if (this.curSelectedIndex - offsetInteger > this.group.length - 1) {
-        // 旋转刻度重置到最后一个的位置
-        this.dist = this.curDist + this.itemH * (this.curSelectedIndex - (this.group.length - 1))
-        this.curSelectedIndex = this.group.length - 1
-      } else {
-        // 旋转刻度重置到curSelectedIndex的位置
-        this.dist = this.curDist + this.itemH * offsetInteger
-        this.curSelectedIndex -= offsetInteger
-      }
+       * 记录isMove，用于处理点击操作时，不执行滚动计算
+       */
+      if (this.isMove) {
+        this.isMove = false
+        // 记录滑动方向（此方向为item滚动方向，与手指实际滑动方向相反）
+        this.direction = this.offset > 0 ? -1 : 1
+        // 计算应该选中的index
+        const offsetInteger = Math.round(this.offset / this.itemH)
+        /**
+         * 往上滑动，实际手指向下滑动，所以要用 - 
+         *  */
+        if (this.curSelectedIndex - offsetInteger < 0) {
+          // 旋转刻度重置到0的位置
+          this.dist = this.curDist + this.itemH * (this.curSelectedIndex - 0)
+          this.curSelectedIndex = 0
+        } else if (this.curSelectedIndex - offsetInteger > this.group.length - 1) {
+          // 旋转刻度重置到最后一个的位置
+          this.dist = this.curDist + this.itemH * (this.curSelectedIndex - (this.group.length - 1))
+          this.curSelectedIndex = this.group.length - 1
+        } else {
+          // 旋转刻度重置到curSelectedIndex的位置
+          this.dist = this.curDist + this.itemH * offsetInteger
+          this.curSelectedIndex -= offsetInteger
+        }
 
-      this.moveToSelected()
+        this.moveToSelected()
+      }
     },
     moveToSelected: function () {
       // 判断选中item是否为item
@@ -165,7 +174,7 @@ export default {
         // 超过group长度
         return
       } else {
-        this.direction = offsetY < 0 ? 1 : -1
+        this.direction = offsetY < 0 ? -1 : 1
         this.dist = this.curDist + this.itemH * offsetInteger
         this.curSelectedIndex -= offsetInteger
 
