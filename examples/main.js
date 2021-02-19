@@ -3,8 +3,8 @@ import App from './App.vue'
 import router from './router'
 import WeuiDesignVue from '../packages'
 import DemoBlock from './components/DemoBlock.vue'
+import '../packages/weui.scss' // weui样式
 import './assets/css/common.scss' // 公共样式
-import '../packages/weui.css' // weui样式
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import bash from 'highlight.js/lib/languages/bash';

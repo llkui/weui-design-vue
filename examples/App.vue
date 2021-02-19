@@ -24,7 +24,7 @@
           <a target="_blank" href="https://github.com/llkui/weui-design-vue"
             >weui-design-vue</a
           >
-          2020 Implement By llkui
+          2020-2021 Implement By llkui
         </div>
       </div>
     </div>

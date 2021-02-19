@@ -70,7 +70,7 @@ import WeuiToast from './toast'
 import WeuiTopTips from './toptips'
 import WeuiUploader from './uploader'
 
-import './weui.css'
+import './weui.scss'
 
 // 所有组件列表
 const components = [
