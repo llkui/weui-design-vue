@@ -1,7 +1,13 @@
 <template>
   <div :style="visible ? 'opacity: 1;' : 'opacity: 0; display: none;'">
     <div class="weui-mask_transparent"></div>
-    <div :class="type == 'info' ? 'weui-toast_text' : ''" class="weui-toast">
+    <div
+      :class="
+        (type == 'info' ? 'weui-toast_text' : '') +
+        (more ? ' weui-toast_text-more' : '')
+      "
+      class="weui-toast"
+    >
       <i
         class="weui-icon-success-no-circle weui-icon_toast"
         v-if="type == 'success'"
@@ -20,11 +26,12 @@
 <script>
 export default {
   name: 'WeuiToast',
-  data() {
+  data () {
     return {
       text: '',
       type: '',
       visible: false,
+      more: false,
     }
   },
   methods: {
@@ -49,6 +56,8 @@ export default {
       this.visible = true
       const duration =
         config && config.duration !== undefined ? config.duration : 2000
+      this.more =
+        config && config.more !== undefined ? config.more : false
       if (duration !== 0) {
         setTimeout(() => {
           this.visible = false

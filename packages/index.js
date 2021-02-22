@@ -36,13 +36,13 @@ import WeuiGrid from './grid'
 import WeuiGridItem from './grid-item'
 import WeuiHalfScreenDialog from './half-screen-dialog'
 import WeuiIcon from './icon'
+import WeuiListTips from './list-tips'
+import WeuiListTipsItem from './list-tips-item'
 import WeuiLoading from './loading'
 import WeuiLoadmore from './loadmore'
 import WeuiMsg from './msg'
-import {
-  WeuiNavbar,
-  WeuiNavbarItem
-} from './navbar'
+import WeuiNavbar from './navbar'
+import WeuiNavbarItem from './navbar-item'
 import {
   WeuiPanel,
   WeuiMedia,
@@ -52,20 +52,17 @@ import {
 import WeuiPicker from './picker'
 import {
   WeuiPreview,
+  WeuiPreviewList,
   WeuiPreviewItem,
   WeuiPreviewButton
 } from './preview'
 import WeuiProgress from './progress'
 import WeuiSearchBar from './search-bar'
 import WeuiSlider from './slider'
-import {
-  WeuiTab,
-  WeuiTabPanel
-} from './tab'
-import {
-  WeuiTabbar,
-  WeuiTabbarItem
-} from './tabbar'
+import WeuiTab from './tab';
+import WeuiTabPanel from './tab-panel'
+import WeuiTabbar from './tabbar'
+import WeuiTabbarItem from './tabbar-item'
 import WeuiToast from './toast'
 import WeuiTopTips from './toptips'
 import WeuiUploader from './uploader'
@@ -110,6 +107,8 @@ const components = [
   WeuiGridItem,
   WeuiHalfScreenDialog,
   WeuiIcon,
+  WeuiListTips,
+  WeuiListTipsItem,
   WeuiLoading,
   WeuiLoadmore,
   WeuiMsg,
@@ -121,6 +120,7 @@ const components = [
   WeuiMediaInfoMeta,
   WeuiPicker,
   WeuiPreview,
+  WeuiPreviewList,
   WeuiPreviewItem,
   WeuiPreviewButton,
   WeuiProgress,
@@ -190,6 +190,8 @@ export {
   WeuiGridItem,
   WeuiHalfScreenDialog,
   WeuiIcon,
+  WeuiListTips,
+  WeuiListTipsItem,
   WeuiLoading,
   WeuiLoadmore,
   WeuiMsg,
@@ -201,6 +203,7 @@ export {
   WeuiMediaInfoMeta,
   WeuiPicker,
   WeuiPreview,
+  WeuiPreviewList,
   WeuiPreviewItem,
   WeuiPreviewButton,
   WeuiProgress,

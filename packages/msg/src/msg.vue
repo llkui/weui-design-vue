@@ -14,6 +14,9 @@
         <template v-if="descPrimary">{{ descPrimary }}</template>
         <slot name="descPrimary" v-if="!descPrimary"></slot>
       </p>
+      <div class="weui-msg__custom-area">
+        <slot name="custom"></slot>
+      </div>
     </div>
     <div class="weui-msg__opr-area">
       <p class="weui-btn-area">

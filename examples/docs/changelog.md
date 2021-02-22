@@ -1,5 +1,13 @@
 ## 更新日志
 
+### progress...
+
+#### Features
+
+- toast: config添加more属性，支持长文案场景
+- msg: 添加custom插槽
+- 新增 `preview-list` `list-tips` `list-tips-item` 组件
+
 ### 2.0.2
 
 `2021-02-19`
