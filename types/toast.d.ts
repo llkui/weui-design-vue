@@ -1,5 +1,6 @@
 export type ToastConfig = {
-  duration?: number
+  duration?: number,
+  more?: boolean
 }
 
 export interface WeuiToast {
