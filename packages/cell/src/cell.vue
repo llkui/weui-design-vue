@@ -1,7 +1,12 @@
 <template>
   <div :class="cellClass" @click="clickLink()">
-    <div class="weui-cell__hd">
-      <img :src="icon" alt style="width: 20px; margin-right: 16px; display: block" v-if="icon" />
+    <div class="weui-cell__hd" v-if="icon || $slots.label">
+      <img
+        :src="icon"
+        alt
+        style="width: 20px; margin-right: 16px; display: block"
+        v-if="icon"
+      />
       <template v-if="!icon">
         <slot name="label"></slot>
       </template>
@@ -9,7 +14,7 @@
     <div class="weui-cell__bd" ref="body">
       <template v-if="!isSwipe">
         <template v-if="title">
-          <p>{{title}}</p>
+          <p>{{ title }}</p>
         </template>
         <template v-if="!title">
           <slot name="title"></slot>
@@ -24,7 +29,7 @@
     </div>
     <div class="weui-cell__ft">
       <template v-if="!isSwipe">
-        <template v-if="value">{{value}}</template>
+        <template v-if="value">{{ value }}</template>
         <template v-if="!value">
           <slot name="value"></slot>
         </template>
@@ -35,7 +40,8 @@
         href="javascript:"
         ref="btn"
         v-if="isSwipe"
-      >{{swipeText}}</a>
+        >{{ swipeText }}</a
+      >
     </div>
   </div>
 </template>

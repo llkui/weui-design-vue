@@ -85,10 +85,10 @@ cell-group可以为cell提供外边框
 
 | 参数      | 说明               | 类型          | 可选值 | 默认值 |
 | --------- | ------------------ | ------------- | ------ | ------ |
+| icon      | 图标               | string        | —      | —      |
 | label     | 标签内容           | slot          | —      | —      |
 | title     | 标题               | string / slot | —      | —      |
 | value     | 内容               | string / slot | —      | —      |
-| icon      | 图标               | string        | —      | —      |
 | is-link   | 可跳转             | boolean       | —      | false  |
 | is-active | 是否包含选中后效果 | boolean       | —      | false  |
 | is-swipe  | 可滑动             | boolean       | —      | false  |

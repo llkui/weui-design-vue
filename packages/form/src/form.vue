@@ -2,7 +2,7 @@
   <div class="weui-form">
     <div class="weui-form__text-area" v-if="title || desc">
       <h2 class="weui-form__title">{{ title }}</h2>
-      <div class="weui-form__desc">{{ desc }}</div>
+      <div class="weui-form__desc" v-if="desc">{{ desc }}</div>
     </div>
     <slot></slot>
   </div>

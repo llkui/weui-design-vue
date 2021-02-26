@@ -6,7 +6,7 @@
 <template>
   <weui-button type="default" @click="success()">成功提示</weui-button>
   <weui-button type="default" @click="warn(false)">失败提示</weui-button>
-  <weui-button type="default" @click="warn(true)">长文本提示</weui-button>
+  <weui-button type="default" @click="warn(true)">长文案提示</weui-button>
   <weui-button type="default" @click="loading()">加载中提示</weui-button>
   <weui-button type="default" @click="info()">文字提示</weui-button>
 </template>
