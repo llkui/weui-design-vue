@@ -16,6 +16,7 @@ body {
 
 #app {
   height: 100%;
+  color: var(--weui-FG-0);
 
   &.is-component {
     overflow-y: hidden;
