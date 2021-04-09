@@ -68,7 +68,7 @@
 </script>
 <style>
   .progress {
-    background-color: #ffffff;
+    background-color: var(--weui-BG-2);
     padding: 10px;
   }
   .weui-progress {

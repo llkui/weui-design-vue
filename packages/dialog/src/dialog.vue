@@ -10,20 +10,23 @@
       </div>
       <div class="weui-dialog__bd">
         <slot></slot>
+        <template v-if="useType == 'function'">
+          <p v-html="content"></p>
+        </template>
       </div>
       <div class="weui-dialog__ft">
         <a
           @click="cancel()"
           class="weui-dialog__btn weui-dialog__btn_default"
           href="javascript:"
-          v-if="cancelText || showCancel"
+          v-if="showCancel"
           >{{ cancelText }}</a
         >
         <a
           @click="ok()"
           class="weui-dialog__btn weui-dialog__btn_primary"
           href="javascript:"
-          v-if="okText || showOk"
+          v-if="showOk"
           >{{ okText }}</a
         >
       </div>
@@ -33,6 +36,14 @@
 <script>
 export default {
   name: 'WeuiDialog',
+  data () {
+    return {
+      useType: 'component',
+      content: null,
+      onCancel: function () { },
+      onOk: function () { }
+    }
+  },
   props: {
     visible: {
       type: Boolean,
@@ -52,7 +63,7 @@ export default {
     },
     title: {
       type: String,
-      default: '弹窗标题'
+      default: '提示'
     },
     cancelText: {
       type: String,
@@ -65,10 +76,33 @@ export default {
   },
   methods: {
     cancel: function () {
-      this.$emit('onCancel')
+      if (this.useType === 'component') {
+        this.$emit('onCancel')
+      } else {
+        this.visible = false
+        this.onCancel()
+      }
     },
     ok: function () {
-      this.$emit('onOk')
+      if (this.useType === 'component') {
+        this.$emit('onOk')
+      } else {
+        this.visible = false
+        this.onOk()
+      }
+    },
+    show: function (config) {
+      this.useType = 'function'
+      this.visible = true
+      this.type = config.type ? config.type : 'ios'
+      this.title = config.title ? config.title : '提示'
+      this.content = config.content ? config.content : null
+      this.cancelText = config.cancelText ? config.cancelText : '取消'
+      this.okText = config.okText ? config.okText : '确定'
+      this.showCancel = config.showCancel !== undefined ? config.showCancel : true
+      this.showOk = config.showOk !== undefined ? config.showOk : true
+      this.onCancel = config.onCancel ? config.onCancel : function () { }
+      this.onOk = config.onOk ? config.onOk : function () { }
     }
   }
 }

@@ -1,5 +1,14 @@
 ## 更新日志
 
+### 2.0.5
+
+`2021-04-09`
+
+#### Features
+
+- dialog: 添加函数调用$dialog.show(config) (<a href="https://github.com/llkui/weui-design-vue/issues/4" target="_blank">#4</a>)
+- 添加全局样式，优化dark模式下样式异常 (<a href="https://github.com/llkui/weui-design-vue/issues/5" target="_blank">#5</a>)
+
 ### 2.0.4
 
 `2021-02-26`

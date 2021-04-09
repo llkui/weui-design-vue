@@ -4,6 +4,7 @@ import { WeuiToast } from './toast'
 import { WeuiToptips } from './toptips'
 import { WeuiPicker } from './picker'
 import { WeuiActionSheet } from './action-sheet'
+import { WeuiDialog } from './dialog'
 
 export const version: string
 export function install(vue: typeof Vue): void
@@ -11,7 +12,6 @@ export function install(vue: typeof Vue): void
 export class WeuiArticle extends WeuiComponent { }
 export class WeuiBadge extends WeuiComponent { }
 export class WeuiButton extends WeuiComponent { }
-export class WeuiDialog extends WeuiComponent { }
 export class WeuiFlex extends WeuiComponent { }
 export class WeuiFlexItem extends WeuiComponent { }
 export class WeuiFooter extends WeuiComponent { }
@@ -68,5 +68,6 @@ export {
   WeuiToast,
   WeuiToptips,
   WeuiPicker,
-  WeuiActionSheet
+  WeuiActionSheet,
+  WeuiDialog
 }

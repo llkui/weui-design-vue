@@ -89,7 +89,7 @@ export default {
       position: relative;
       transition: 0.15s ease-out;
       font-weight: bold;
-      border-left: #ffffff 2px solid;
+      border-left: var(--weui-BG-2) 2px solid;
       &:hover {
         color: var(--weui-BRAND);
       }
@@ -149,7 +149,7 @@ export default {
     line-height: 26px;
     padding: 10px;
     margin-left: 20px;
-    border-left: #ffffff 2px solid;
+    border-left: var(--weui-BG-2) 2px solid;
     font-weight: bold;
   }
   #code-sponsor-widget {

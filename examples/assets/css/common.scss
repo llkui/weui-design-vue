@@ -16,7 +16,6 @@ body {
 
 #app {
   height: 100%;
-  color: var(--weui-FG-0);
 
   &.is-component {
     overflow-y: hidden;
@@ -140,7 +139,7 @@ textarea {
         margin-left: 5px;
         margin-right: 4px;
         border: 1px solid #ddd;
-        background: #f6f6f6;
+        background: var(--weui-BG-2);
         padding: 3px;
         border-radius: 3px;
       }
@@ -189,7 +188,7 @@ textarea {
     width: 100%;
     border-collapse: collapse;
     padding: 8px 16px;
-    background-color: #fff;
+    background-color: var(--weui-BG-2);
     font-size: 14px;
     margin-top: 10px;
     margin-bottom: 45px;
@@ -222,7 +221,7 @@ textarea {
       margin-left: 5px;
       margin-right: 4px;
       border: 1px solid #ddd;
-      background: #f6f6f6;
+      background: var(--weui-BG-2);
       padding: 3px;
       border-radius: 3px;
     }
