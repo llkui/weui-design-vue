@@ -32,6 +32,7 @@ export default {
       type: '',
       visible: false,
       more: false,
+      callback: function () { }
     }
   },
   methods: {
@@ -58,9 +59,11 @@ export default {
         config && config.duration !== undefined ? config.duration : 2000
       this.more =
         config && config.more !== undefined ? config.more : false
+      this.callback = config && config.callback ? config.callback : function () { }
       if (duration !== 0) {
         setTimeout(() => {
           this.visible = false
+          this.callback()
         }, duration)
       }
     },

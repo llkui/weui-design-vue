@@ -30,7 +30,11 @@
         }, 4000)
       },
       info: function() {
-        this.$toast.info('文字提示');
+        this.$toast.info('文字提示', {
+          callback: () => {
+            this.$toast.info('执行callback');
+          }
+        });
       }
     }
   }
@@ -52,10 +56,11 @@
 
 ### config
 
-| 参数     | 说明                                            | 类型    | 可选值 | 默认值 |
-| -------- | ----------------------------------------------- | ------- | ------ | ------ |
-| duration | 显示时长后自动关闭（单位：ms），0 表示永久      | number  | —      | 2000   |
-| more     | 是否为长文本，适用于 `success` `warn` `loading` | boolean | —      | false  |
+| 参数     | 说明                                            | 类型       | 可选值 | 默认值 |
+| -------- | ----------------------------------------------- | ---------- | ------ | ------ |
+| duration | 显示时长后自动关闭（单位：ms），0 表示永久      | number     | —      | 2000   |
+| more     | 是否为长文本，适用于 `success` `warn` `loading` | boolean    | —      | false  |
+| callback | 关闭后的回调                                    | function() | —      | —      |
 
 ### $toast.hide()
 
