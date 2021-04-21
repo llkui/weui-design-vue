@@ -52,7 +52,7 @@ $ npm run serve
 
 ## Mobile example
 
-![qrcode](https://llkui.github.io/weui-design-vue/static/qrcode.png)
+![qrcode](https://llkui.github.io/weui-design-vue/qrcode.png)
 
 [https://llkui.github.io/weui-design-vue-example](https://llkui.github.io/weui-design-vue-example)
 
