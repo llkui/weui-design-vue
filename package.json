@@ -1,71 +1,22 @@
 {
   "name": "weui-design-vue",
-  "version": "2.0.6",
-  "private": false,
-  "description": "A Mobile UI components based on Weui Design and Vue",
-  "homepage": "https://llkui.github.io/weui-design-vue",
-  "repository": "https://github.com/llkui/weui-design-vue",
-  "main": "lib/weui-design-vue.umd.min.js",
-  "style": "lib/weui-design-vue.css",
-  "typings": "types/index.d.ts",
-  "author": "llkui",
-  "keywords": [
-    "vue",
-    "vue ui",
-    "weui",
-    "mobile ui",
-    "component",
-    "components"
-  ],
-  "license": "MIT",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build:report": "vue-cli-service build --report --report-json",
-    "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name weui-design-vue --dest publish/lib packages/index.js && gulp",
-    "lib:all": "npm run lib && node ./build/lib-cli.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "highlight.js": "^10.4.0",
-    "markdown-it": "^12.0.2",
-    "markdown-it-container": "^3.0.0",
-    "vue": "^2.6.11",
-    "vue-router": "^3.0.1",
+    "highlight.js": "^11.5.1",
+    "vite-plugin-md": "^0.12.4",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.15",
     "weui": "^2.4.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.0",
-    "@vue/cli-plugin-eslint": "^4.5.0",
-    "@vue/cli-service": "^4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "gulp": "^4.0.2",
-    "gulp-rimraf": "^1.0.0",
-    "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.0",
-    "vue-markdown-loader": "^2.4.1",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "@vitejs/plugin-vue": "^2.3.3",
+    "sass": "^1.53.0",
+    "vite": "^2.9.9"
+  }
 }
