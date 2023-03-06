@@ -37,7 +37,7 @@ const config: UserConfig = {
   lang: 'zh-CN',
   lastUpdated: true,
   ignoreDeadLinks: true,
-  base: '/weui-design/vue/3.0.0/',
+  base: '/weui-design-vue/3.0.0/',
   head,
   themeConfig: {
     nav,
