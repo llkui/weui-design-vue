@@ -67,7 +67,7 @@ const sidebar = {
 
 
 const config: UserConfig = {
-  title: 'Ant Design Vue',
+  title: 'WeUI Design Vue',
   description: 'A Mobile UI components based on `Weui Design` and `Vue`',
   lang: 'zh-CN',
   lastUpdated: true,
