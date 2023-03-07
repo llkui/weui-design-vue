@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: Weui Design Vue
-  text: A Mobile UI components based on `Weui Design` and `Vue`.
-  tagline: 正在开发中...
+  text: Weui & Vue
+  tagline: 3.0.0正在升级中...
   image:
     src: ./logo.png
     alt: Weui Design Vue

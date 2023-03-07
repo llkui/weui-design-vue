@@ -21,7 +21,10 @@
   "homepage": "https://github.com/llkui/weui-design-vue#readme",
   "devDependencies": {
     "typescript": "^4.9.5",
-    "vitepress": "^1.0.0-alpha.49",
+    "vitepress": "^1.0.0-alpha.50",
     "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "weui": "^2.4.3"
   }
 }
