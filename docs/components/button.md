@@ -1,3 +1,5 @@
+# Button 按钮
+
 ## type
 
 <weui-button :disabled="disabled" @click="ccc">页面主操作</weui-button>

@@ -4,4 +4,4 @@ WeuiArticle.install = vue => {
   vue.component(WeuiArticle.name, WeuiArticle)
 }
 
-export default WeuiArticle
+export { WeuiArticle }

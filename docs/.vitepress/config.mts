@@ -62,6 +62,7 @@ const sidebar = {
         { text: 'Flex 布局', link: '/components/flex' },
         { text: 'Footer 页脚', link: '/components/footer' },
         { text: 'Gallery', link: '/components/gallery' },
+        { text: 'Grid 九宫格', link: '/components/grid' },
         { text: 'Icons 图标', link: '/components/icons' },
         { text: 'Loading 正在加载', link: '/components/loading' },
         { text: 'Loadmore 加载更多', link: '/components/loadmore' },
