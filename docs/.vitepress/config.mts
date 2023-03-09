@@ -98,7 +98,7 @@ const sidebar = {
       text: '搜索相关',
       collapsible: true,
       items: [
-        { text: 'SearchBar 搜索栏', link: '/components/searchbar' },
+        { text: 'SearchBar 搜索栏', link: '/components/search-bar' },
       ],
     },
   ],

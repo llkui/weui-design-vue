@@ -8,6 +8,8 @@ import { WeuiGrid, WeuiGridItem } from './grid'
 import { WeuiIcon } from './icon'
 import { WeuiLoading } from './loading'
 import { WeuiLoadmore } from './loadmore'
+import { WeuiPreview, WeuiPreviewItem, WeuiPreviewButton } from './preview'
+import { WeuiSearchBar } from './search-bar'
 
 // 所有组件列表
 const components = [
@@ -27,6 +29,10 @@ const components = [
   WeuiIcon,
   WeuiLoading,
   WeuiLoadmore,
+  WeuiPreview,
+  WeuiPreviewItem,
+  WeuiPreviewButton,
+  WeuiSearchBar,
 ]
 // 定义install方法，接受Vue作为参数
 const install = function (Vue) {
@@ -64,4 +70,8 @@ export {
   WeuiIcon,
   WeuiLoading,
   WeuiLoadmore,
+  WeuiPreview,
+  WeuiPreviewItem,
+  WeuiPreviewButton,
+  WeuiSearchBar,
 } 
