@@ -2,13 +2,8 @@
 
 ## type
 
-<weui-loading></weui-loading>
-<weui-loading :type="'primary'"></weui-loading>
-<weui-loading :type="'brand'"></weui-loading>
-<weui-loading :type="'transparent'"></weui-loading>
-
-:::details 类型：'primary'|'brand'|'transparent' 默认：null
-```vue
+:::demo
+```html
 <weui-loading></weui-loading>
 <weui-loading :type="'primary'"></weui-loading>
 <weui-loading :type="'brand'"></weui-loading>

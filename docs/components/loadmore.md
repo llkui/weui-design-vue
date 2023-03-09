@@ -2,40 +2,32 @@
 
 ## tip
 
-<weui-loadmore :tip="'正在加载'"></weui-loadmore>
-
-:::details
-```vue
+:::demo
+```html
 <weui-loadmore :tip="'正在加载'"></weui-loadmore>
 ```
 :::
 
 ## loading
 
-<weui-loadmore :tip="'正在加载'" :loading="true"></weui-loadmore>
-
-:::details
-```vue
+:::demo
+```html
 <weui-loadmore :tip="'正在加载'" :loading="true"></weui-loadmore>
 ```
 :::
 
 ## line
 
-<weui-loadmore :tip="'暂无数据'" :line="true"></weui-loadmore>
-
-:::details
-```vue
+:::demo
+```html
 <weui-loadmore :tip="'暂无数据'" :line="true"></weui-loadmore>
 ```
 :::
 
 ## dot
 
-<weui-loadmore :line="true" :dot="true"></weui-loadmore>
-
-:::details
-```vue
+:::demo
+```html
 <weui-loadmore :line="true" :dot="true"></weui-loadmore>
 ```
 :::

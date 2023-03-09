@@ -1,0 +1,13 @@
+.example {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background-color: var(--vp-sidebar-bg-color);
+}
+
+.example-showcase {
+  padding: 20px 24px;
+}
+
+div[class*='language-'] {
+  margin: 0 !important;
+}

@@ -25,6 +25,8 @@
     "vue": "^3.2.47"
   },
   "dependencies": {
+    "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
     "weui": "^2.4.3"
   }
 }

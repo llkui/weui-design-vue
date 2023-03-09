@@ -1,4 +1,5 @@
 import type { UserConfig, HeadConfig } from 'vitepress';
+import mdPlugin from './plugins'
 
 // 在html文档增加一些通用的脚本script、样式css、meta等
 const head: HeadConfig[] = [
@@ -133,6 +134,9 @@ const config: UserConfig = {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2020-present llkui'
     },
+  },
+  markdown: {
+    config: (md) => mdPlugin(md),
   },
 };
 
